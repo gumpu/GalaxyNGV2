@@ -1,0 +1,1 @@
+# vi: spell spl=en
