@@ -4,12 +4,15 @@
 
 import unittest
 
-class GameTestCase(unittest.TestCase):
+class PlanetTestCase(unittest.TestCase):
+
+    def test_key(self):
+        pass
+
     def test_dummy(self):
         pass
 
-
 if __name__=='__main__':
-    suite = unittest.TestLoader().loadTestsFromTestCase(GameTestCase)
+    suite = unittest.TestLoader().loadTestsFromTestCase(PlanetTestCase)
     unittest.TextTestRunner(verbosity=2).run(suite)
 

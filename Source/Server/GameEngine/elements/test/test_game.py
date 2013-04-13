@@ -1,13 +1,20 @@
-
+#!/usr/bin/env python
 # vi: spell spl=en
 #
 
 import unittest
+from elements.game import Game
 
-class PlanetTestCase(unittest.TestCase):
+
+class GameTestCase(unittest.TestCase):
+
+    def test_create_game(self):
+        a_game = Game()
+        a_game.create(None)
+        self.assertIsNotNone(a_game.universe)
+
     def test_dummy(self):
         pass
-
 
 if __name__=='__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(GameTestCase)
