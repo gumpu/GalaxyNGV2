@@ -1,19 +1,19 @@
 # vi: spell spl=en
 
-
-from elements.planet import Planet
-from elements.universe import Universe
+from element.turn  import Turn
 
 class Game(object):
 
     """Game -- all data for a single game.
     """
     def __init__(self):
-        self.universe = None
-        self.nations  = {}
+        self.name  = None
+        self.turn  = []
 
 
     """Create a new game
     """
     def create(self, game_options ):
-        self.universe = Universe()
+        # Create turn 0
+        self.turn[ 0 ] = Turn();
+        self.turn[ 0 ].create()

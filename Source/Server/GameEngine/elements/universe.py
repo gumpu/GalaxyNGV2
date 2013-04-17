@@ -1,4 +1,3 @@
-
 # vi: spell spl=en
 
 class Universe(object):
@@ -9,7 +8,7 @@ class Universe(object):
         self.size    = size
         self.planets = {}
 
-    """Create a new universion populated with planets
+    """Create a new universe populated with planets
     and nations.
     """
     def create(self):
