@@ -13,6 +13,6 @@ class Turn(object):
 
     def create( self, game_options ):
         self.universe = Universe()
-        self.Universe.create()
+        self.universe.create()
 
 

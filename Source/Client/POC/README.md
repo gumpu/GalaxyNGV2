@@ -20,9 +20,11 @@ Two possible canvases to do this on are:
 1. YUI
 2. MooTools
 3. KineticJS
-4. jquery 
-5. jquerygiu
+4. jQuery 
+5. jQueryGui
 6. Node.js
+7. jCanvas -- jQuery like API on top of HTML5 Canvas.
+   http://calebevans.me/projects/jcanvas/ 
 
 ##Data exchange 
 
@@ -31,6 +33,10 @@ Possible dataformats for these:
 
 1. XML
 2. JSON
+
+##Development
+
+1. Firebug
 
 ##Pipeline
 

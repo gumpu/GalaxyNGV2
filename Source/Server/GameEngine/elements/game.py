@@ -1,6 +1,6 @@
 # vi: spell spl=en
 
-from element.turn  import Turn
+from elements.turn  import Turn
 
 class Game(object):
 
@@ -15,5 +15,5 @@ class Game(object):
     """
     def create(self, game_options ):
         # Create turn 0
-        self.turn[ 0 ] = Turn();
-        self.turn[ 0 ].create()
+        self.turn.append( Turn() )
+        self.turn[ 0 ].create( game_options )

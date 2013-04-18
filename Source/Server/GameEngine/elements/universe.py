@@ -1,5 +1,8 @@
 # vi: spell spl=en
 
+from elements.planet import Planet
+from random import randint
+
 class Universe(object):
 
     """Planet -- base class for a kinds of planets
@@ -8,8 +11,7 @@ class Universe(object):
         self.size    = size
         self.planets = {}
 
-    """Create a new universe populated with planets
-    and nations.
+    """Create a new universe populated with planets and nations.  
     """
     def create(self):
         for i in xrange(0,200) :
@@ -22,11 +24,13 @@ class Universe(object):
 
     """Places a planet in a unique location
     """
-    def place_planet( a_planet ):
+    def place_planet( self, a_planet ):
+        a_planet.x = randint(0,100)
+        a_planet.y = randint(0,100)
         pass
 
 
-    def distance(self, planet1, planet2):
+    def distance( self, planet1, planet2 ):
         return 0
 
 
