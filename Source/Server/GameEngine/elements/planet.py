@@ -12,10 +12,14 @@ class Planet(object):
     """Compute the distance between this planet and
     another planet.
     """
-    def dist(self, another_planet):
+    def dist( self, another_planet ):
         return 0
 
 
-    def key(self):
+    def key( self ):
         k = "%d,%d" % (self.x, self.y)
         return k
+
+    def report( self ):
+        print ( "%s %d %d" % (self.name, self.x, self.y) )
+

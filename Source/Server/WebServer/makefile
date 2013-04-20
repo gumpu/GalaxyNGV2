@@ -1,3 +1,3 @@
 
 clean :
-	rm *.pyc
+	rm -rf *.pyc

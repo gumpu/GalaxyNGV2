@@ -34,3 +34,7 @@ class Universe(object):
         return 0
 
 
+    def report( self ):
+        for (key,p) in iter(sorted(self.planets.items())) :
+            p.report()
+

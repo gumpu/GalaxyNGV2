@@ -6,7 +6,7 @@ class Turn(object):
     """Data for a single turn
     """
 
-    def __init__(self):
+    def __init__( self ):
         self.universe = None
         self.nations  = {}
         self.number   = 0
@@ -15,4 +15,6 @@ class Turn(object):
         self.universe = Universe()
         self.universe.create()
 
+    def report( self ):
+        self.universe.report()
 
