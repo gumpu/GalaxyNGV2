@@ -26,4 +26,5 @@ if args.command == 'create' :
 elif args.command == 'run' :
     with open('test.pickel', 'r') as f :
         game = p.load(f)
-        print game.turn[0].universe.planets
+        game.turn[0].report()
+

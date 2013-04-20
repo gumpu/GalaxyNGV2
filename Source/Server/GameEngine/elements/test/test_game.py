@@ -11,7 +11,7 @@ class GameTestCase(unittest.TestCase):
     def test_create_game(self):
         a_game = Game()
         a_game.create(None)
-        self.assertIsNotNone(a_game.universe)
+        self.assertIsEqual(a_game.turn, 1 )
 
     def test_dummy(self):
         pass
