@@ -8,6 +8,10 @@ class Planet(object):
         self.x = 0
         self.y = 0
         self.name = name
+        self.size = 0
+        self.population = 0
+        self.colonists  = 0
+        self.resources  = 0
 
     """Compute the distance between this planet and
     another planet.
