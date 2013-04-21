@@ -4,6 +4,13 @@
 PROD_CAPITAL  = 1
 PROD_SHIP     = 2
 PROD_MATERIAL = 3
+PROD_DRIVE    = 4
+PROD_WEAPONS  = 5
+PROD_SHIELD   = 6
+PROD_CARGO    = 7
+
+MAT_PER_CAP   = 1.0  # Materials needed per unit of capital
+IND_PER_CAP   = 5.0  # Industry needed per unit of capital
 
 class Planet(object):
 
@@ -15,11 +22,14 @@ class Planet(object):
         self.name = name
         self.size = 0
         self.population = 0
-        self.colonists  = 0
-        self.resources  = 0
-        self.material   = 0
-        self.capital    = 0
+        self.industry   = 0
         self.production = None
+        self.resources  = 0
+        # Stockpiles
+        self.materials  = 0
+        self.colonists  = 0
+        self.capital    = 0
+
 
     """Compute the distance between this planet and
     another planet.
@@ -40,12 +50,27 @@ class Planet(object):
 
 
     def produce(self):
+
+        industry = self.industry*0.75 + self.population*0.25
+
         if self.production   == PROD_MATERIAL:
-            pass
+            self.materials = self.materials + industry * self.resources
         elif self.production == PROD_SHIP:
             pass
-        elif self.production == PROD_MATERIAL:
-            pass
-        else
+        elif self.production == PROD_CAPITAL:
+            material_demand = industry / IND_PER_CAP
+            if material_demand > self.materials:
+                # First use the existing resources to build capital
+                capital = self.materials * MAT_PER_CAP
+                industry = industry - capital * IND_PER_CAP
+                self.materials = 0
+                # The build more material and use that to build capital
+                capital = capital + industry / (IND_PER_CAP + 1.0 / self.resources)
+            else:
+                capital = self.materials * MAT_PER_CAP
+                industry = industry - capital * IND_PER_CAP
+                self.materials = self.materials - material_demand
+            self.capital = self.capital + capital
+        else:
             pass
 
