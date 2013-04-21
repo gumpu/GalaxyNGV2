@@ -13,7 +13,8 @@ class GameTestCase(unittest.TestCase):
         a_game.create(None)
         self.assertIsEqual(a_game.turn, 1 )
 
-    def test_dummy(self):
+    def test_save_game(self):
+        # TODO
         pass
 
 if __name__=='__main__':

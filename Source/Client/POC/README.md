@@ -42,5 +42,9 @@ Possible dataformats for these:
 
 [webserver python] -> [report in json] -> [client javascript]
 
+##Webserver
+
+1. CherryPie
+2. Django
 
 vi: spell spl=en ft=markdown

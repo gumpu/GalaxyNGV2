@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python
 # vi: spell spl=en
 #
 
