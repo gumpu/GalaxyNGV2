@@ -2,6 +2,12 @@ vi: spell spl=en ft=markdown
 
 #Player Manual
 
+For GalaxyNG V2
+
+Version 0.1
+
+April 2013
+
 ##Introduction
 
 GalaxyNG is a multiplayer game of interstellar war.  The objective of the game
@@ -21,32 +27,32 @@ of simplicity the third dimension is ignored) which contains a number of
 habitable planets.  Planets are used to build ships, conduct technology
 research, produce capital or produce materials.  Ships explore the galaxy,
 colonize uninhabited planets, haul cargo, conduct warfare and conquer planets
-inhabited by other races.  Technology improvements allow ships to fly faster
+inhabited by other nations.  Technology improvements allow ships to fly faster
 and farther, haul more cargo and fight better.
 
 ###Players
 
-Each player is the leader of one race.  Players can communicate by sending
+Each player is the leader of one nation.  Players can communicate by sending
 messages or email to each other.  Players are anonymous but can choose to
 reveal their identities to other players.  Players can provide their real name
 to the GM for inclusion in the Hall of Fame without breaking their anonymity.
 
 ###Victory and Defeat
 
-The game can be won by a single race or by an alliance of races, depending
-upon the game settings.  Races are ranked based on the total production of
-their planets.  A race is eliminated if it owns no planets and has no ships.
+The game can be won by a single nation or by an alliance of nations, depending
+upon the game settings.  Nations are ranked based on the total production of
+their planets.  A nation is eliminated if it owns no planets and has no ships.
 The game is complete when all surviving players agree to end it and notify the
 game master.
 
 ###Names
 
-Races, planets, ship types and fleets can be named.  Names may be no more than
+Nations, planets, ship types and fleets can be named.  Names may be no more than
 twenty characters (a character is a letter, digit, or underscore) and may not
-include spaces.  Names must be unique.  For example, a race cannot have the
-same name as a fleet.  Each player should provide a name by which their race
+include spaces.  Names must be unique.  For example, a nation cannot have the
+same name as a fleet.  Each player should provide a name by which their nation
 will be known, e.g. Mutant\_Camels or Zzyaxians - if this is not done they will
-simply be known by number, e.g. Race\_4 or Race\_5.  Ship types are given names
+simply be known by number, e.g. Nation\_4 or Nation\_5.  Ship types are given names
 when designed and can be renamed.  Planets are numbered at the start of the
 game and can be given new names by their current owner.
 
@@ -73,9 +79,9 @@ stockpiles.
 
 ###Owner
 
-Inhabited planets are owned by one race at a time (except in the special case
+Inhabited planets are owned by one nation at a time (except in the special case
 of a standoff when an inhabited planet is unowned).  Uninhabited planets are
-not owned by any race.
+not owned by any nation.
 
 ###Size
 
@@ -170,7 +176,7 @@ eliminated if no ships of that type exist or are under construction.
 
 ###Groups
 
-A race can have hundreds or even thousands of ships, which would be
+A nation can have hundreds or even thousands of ships, which would be
 inconvenient to handle individually.  Hence ships are handled in groups, which
 can contain one or more ships all of the same type, in the same place,
 carrying the same quantity and type of cargo (if any) and built with the same
@@ -199,7 +205,7 @@ group 5 containing 48 ships is merged with group 12 containing 52 ships, group
 
 If the SortGroups option is turned on, at the end of each turn groups will be
 automatically sorted and renumbered as follows: Owner's groups at owner's
-planets; Owner's groups at other race's planets; Owner's groups at uninhabited
+planets; Owner's groups at other nation's planets; Owner's groups at uninhabited
 planets; Owner's groups in fleets.
 
 ###Fleets
@@ -219,21 +225,21 @@ unload cargo remain in the fleet.  Groups in fleets will not travel on routes.
 ###Technology
 
 Technology determines the effectiveness of ships.  There are four
-technologies: drive, weapons, shields and cargo.  Each race begins the game
+technologies: drive, weapons, shields and cargo.  Each nation begins the game
 with 1.00 levels in each technology.  Technology can be increased by ordering
 planets to conduct research.
 
-Ships are assigned the technology levels of the race at the time they are
-produced.  As the race's technology level increases, ships can be upgraded at
+Ships are assigned the technology levels of the nation at the time they are
+produced.  As the nation's technology level increases, ships can be upgraded at
 planets owned by the player.
 
 A ship with drive technology 4.00 is twice as fast as an equivalent ship with
-  drive technology 2.00, a ship with weapons technology 1.50 has a 50% more
-  powerful attack than the same ship with weapons technology 1.00, and so
-  forth.  Ships without a component are considered to have a matching
-  technology of zero.  For example, a ship with weapons mass zero is
-  considered to have weapons technology zero.
-  
+drive technology 2.00, a ship with weapons technology 1.50 has a 50% more
+powerful attack than the same ship with weapons technology 1.00, and so forth.
+Ships without a component are considered to have a matching technology of
+zero.  For example, a ship with weapons mass zero is considered to have
+weapons technology zero.
+
 ###Ship Mass
 
 Ship types with zero or one attack have a ship mass of drive mass + weapon
@@ -328,7 +334,7 @@ Note that, when fully loaded, cargo ships can be much slower.  For example:
 
 ###Locating Ships
 
-Each race's administrative staff will keep a record of its own ships on
+Each nation's administrative staff will keep a record of its own ships on
 planets or in hyperspace.  Planet owners have full knowledge of all ships
 orbiting their planets.  Players also receive complete reports on ships at
 planets visited by their own ships.
@@ -367,7 +373,7 @@ effective cargo carried.  Thus, at cargo technology 3.00, a Freighter carrying
 carrying 35.00 cargo has an effective cargo carried of 11.66.
 
 Colonists that are unloaded at an uninhabited planet will claim the planet for
-their race.  Each colonist becomes eight population.  Capital and materials
+their nation.  Each colonist becomes eight population.  Capital and materials
 unloaded at an uninhabited planet will be stockpiled until the planet is
 colonized.
 
@@ -379,7 +385,7 @@ planet can be the destination of an unlimited number of routes.  For example,
 colonists routes can be set from planets 105, 82 and 243 to planet 56 but
 planet 105 cannot simultaneously have a colonists route to planet 97.  Players
 may only establish routes from their own planets, however any planet may be
-the destination of a route.      
+the destination of a route.
 
 Cargo ships that are not in fleets and have not been ordered to travel between
 planets will automatically follow routes.  They will load cargos, travel to
@@ -493,27 +499,26 @@ the current turn production.  For example, a planet with 750 production and
 10.00 resources with no stockpile of materials would produce 1.50 Cruisers per
 turn.  One Cruiser would be produced on the first turn and two Cruisers would
 be produced on the second turn.  A ship which is built over several turns will
-be assigned the technology levels of the race at the start of the final turn.
+be assigned the technology levels of the nation at the start of the final turn.
 If the planet's production is changed, the extra ship production is lost and
 any materials produced on the previous turn are added to the planet's
 stockpiles.
 
 ###Upgrading Groups
 
-Groups can be upgraded at the owning player's planets.
-Groups that are upgraded cannot be ordered to travel to
-another planet or intercept an enemy group, however they
-will be sent on routes and participate in combat.  Ships
+Groups can be upgraded at the owning player's planets.  Groups that are
+upgraded cannot be ordered to travel to another planet or intercept an enemy
+group, however they will be sent on routes and participate in combat.  Ships
 in the group will be upgraded to the owning player's technology levels as of
 the beginning of the turn (if they are already at the current technology
 levels, nothing will happen). The cost of upgrading a ship is equal to a
 fraction of the production cost of a new ship of the same type.  Ugrades do
 not require materials.  The exact formula for the cost is:
 
-Upgrade cost = 10 * ((1 - ship drive tech / current drive tech) * ship drive mass +
-(1 - ship weapons tech / current weapons tech) * ship weapons mass +
-(1 - ship shields tech / current shields tech) * ship shields mass +
-(1 - ship cargo tech / current cargo tech) * ship cargo mass)
+    Upgrade cost = 10 * ((1 - ship drive tech / current drive tech) * ship drive mass +
+    (1 - ship weapons tech / current weapons tech) * ship weapons mass +
+    (1 - ship shields tech / current shields tech) * ship shields mass +
+    (1 - ship cargo tech / current cargo tech) * ship cargo mass)
 
 If the planet does not have enough production to upgrade the entire group,
 then as many ships as can be completely upgraded will be broken into a new
@@ -525,7 +530,7 @@ their each technology increased by the percentage of production points
 available.  The exact formula for a partial
 upgrade for each technology is:
 
-Tech increase = (production available / full upgrade cost) * (current tech - ship tech)
+    Tech increase = (production available / full upgrade cost) * (current tech - ship tech)
 
 Production spent on upgrading groups during a turn is deducted from the
 planet's production for that turn.  Thus, if a planet uses 35% of its
@@ -538,10 +543,10 @@ upgrades, it produces nothing that turn.
 
 ###War and Alliances
 
-At the start of the game all races are assumed to be at war with all the other
-races (except in team games).  Alliances may be declared at the beginning of
+At the start of the game all nations are assumed to be at war with all the other
+nations (except in team games).  Alliances may be declared at the beginning of
 any turn.  Ships will not initiate combat with allied ships, nor will they
-bomb allied planets.  However, there is no way to tell if the allied race has
+bomb allied planets.  However, there is no way to tell if the allied nation has
 also declared an alliance until warships are encountered.  Ships will always
 shoot back if fired on (battles will be fought just as if both sides were at
 war with each other; declaring an alliance puts warships at no disadvantage in
@@ -558,19 +563,20 @@ will not attack).  For each gun on the ship, randomly select a surviving enemy
 ship and fire a shot.  Repeat until all ships have fired.  Battle rounds
 continue until the battle is either a standoff or a win.  A battle is a
 standoff if all remaining ships are invulnerable to enemy attacks.  A battle
-is won if all remaining ships belong to races that are allied with each other.
+is won if all remaining ships belong to nations that are allied with each other.
 
 Attack and defence strengths are calculated using the following forumlae:
 
     attack strength = (weapons mass * weapons technology)
-    defence strength = ((shield mass * shields technology) / (ship mass + effective cargo carried mass)^(1/3)) * 30^(1/3).
+    defence strength = ((shield mass * shields technology) / 
+               (ship mass + effective cargo carried mass)^(1/3)) * 30^(1/3).
 
 If a shot is successful, the enemy ship is destroyed.  The attack forumula is:
 
     p[kill] = (log[4](attack strength / defence strength) + 1) / 2
 
 Where log[4](x) is the log with base 4 of x, 
-which can be computed with log(x)/log(4).  
+which can be computed with log(x)/log(4).
 If the attack strength is four times as strong as the defence strength, the
 attack will always succeed.  If the defence strength is four times as strong
 as the attack strength, the attack will always fail.  The numbers are
@@ -583,21 +589,21 @@ After all battles are resolved, ships with weapons bomb enemy planets,
 reducing population and industry by 75%.  Bombed planets produce capital until
 ordered to produce something else on later turns.
 
-If only one race has ships with weapons orbiting a bombed planet, that race
-becomes the new owner of the planet.  If two or more allied races have ships
-with weapons orbiting a bombed planet, the race that issued a victory command
-becomes the new owner.  If no race issued a victory command, the race that
-appears first in the races table of the turn report receives the planet.  If
-more than one race issued a victory command, or if there was a standoff, the
+If only one nation has ships with weapons orbiting a bombed planet, that nation
+becomes the new owner of the planet.  If two or more allied nations have ships
+with weapons orbiting a bombed planet, the nation that issued a victory command
+becomes the new owner.  If no nation issued a victory command, the nation that
+appears first in the nations table of the turn report receives the planet.  If
+more than one nation issued a victory command, or if there was a standoff, the
 planet becomes unowned and produces nothing
-until it is claimed by the first race that unloads colonists at the planet.
+until it is claimed by the first nation that unloads colonists at the planet.
 
 ##Turn Sequence
 
 1. Planetary production orders are assigned.  Note that production occurs
    later in the turn.
-2.Messages are sent.
-3.Alliances and war are declared.
+2. Messages are sent.
+3. Alliances and war are declared.
 4. Groups with weapons attack enemy ships, causing combat.  This can happen if
    a player declares war on the current turn.  It can also happen if a player
    built a ship with weapons at a planet with enemy ships in orbit at the end
@@ -617,7 +623,7 @@ until it is claimed by the first race that unloads colonists at the planet.
     All ships unload cargo if the autounload option is turned on.
 17. Identical groups are merged.
 18. Groups are renumbered if the sortgroups option is turned on.
-19. Races, planets, ships and fleets are renamed.
+19. Nations, planets, ships and fleets are renamed.
 
 
 A number of things follow from this:

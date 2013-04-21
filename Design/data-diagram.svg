@@ -87,14 +87,6 @@
            id="tspan3009"
            sodipodi:role="line">Shiptype</tspan></text>
     </g>
-    <rect
-       style="fill:#04c800;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:2;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect3031-3"
-       width="106.29921"
-       height="53.149605"
-       x="921.25983"
-       y="325.98425"
-       ry="3.8475304" />
     <g
        id="g4050"
        transform="translate(283.46458,159.44883)">
@@ -195,7 +187,7 @@
     </g>
     <g
        id="g4080"
-       transform="translate(88.582692,-2.8550228e-5)">
+       transform="translate(35.433086,-2.8550228e-5)">
       <rect
          inkscape:transform-center-y="-27.574802"
          inkscape:transform-center-x="124.01574"
@@ -245,7 +237,7 @@
     </g>
     <g
        id="g4110"
-       transform="translate(-17.716556,88.582674)">
+       transform="translate(-2.0665447e-5,106.29921)">
       <g
          id="g4065">
         <rect
@@ -345,6 +337,115 @@
            y="467.71652"
            x="212.59842"
            sodipodi:role="line">Player</tspan></text>
+    </g>
+    <g
+       id="g3155"
+       transform="translate(124.01572,-194.88192)">
+      <rect
+         inkscape:transform-center-y="-27.574808"
+         inkscape:transform-center-x="124.01574"
+         ry="3.8475304"
+         y="644.8819"
+         x="637.79529"
+         height="53.149628"
+         width="141.73232"
+         id="rect3031-3-8-3-5-3-4-1-6-5-8"
+         style="fill:#04c800;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:2;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         inkscape:transform-center-y="-59.860043"
+         inkscape:transform-center-x="17.646271"
+         sodipodi:linespacing="125%"
+         id="text2999-7-1"
+         y="680.31494"
+         x="708.66144"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+         xml:space="preserve"><tspan
+           y="680.31494"
+           x="708.66144"
+           sodipodi:role="line"
+           id="tspan3095">Materials</tspan></text>
+    </g>
+    <g
+       id="g3149"
+       transform="translate(70.866113,-159.44885)">
+      <g
+         id="g3144">
+        <rect
+           ry="3.8475304"
+           y="644.8819"
+           x="832.67712"
+           height="53.149605"
+           width="106.29921"
+           id="rect3031-3-53"
+           style="fill:#04c800;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:2;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           transform="translate(-106.29919,88.582679)" />
+        <text
+           xml:space="preserve"
+           style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+           x="779.52759"
+           y="768.89764"
+           id="text2999-7-1-6"
+           sodipodi:linespacing="125%"
+           inkscape:transform-center-x="17.646271"
+           inkscape:transform-center-y="-59.860043"><tspan
+             y="768.89764"
+             x="779.52759"
+             id="tspan3118"
+             sodipodi:role="line">Capital</tspan></text>
+      </g>
+    </g>
+    <g
+       transform="translate(-372.04724,283.46458)"
+       id="g3161">
+      <rect
+         transform="translate(-106.29919,88.582679)"
+         style="fill:#04c800;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:2;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect3031-3"
+         width="106.29921"
+         height="53.149605"
+         x="921.25983"
+         y="325.98425"
+         ry="3.8475304" />
+      <text
+         inkscape:transform-center-y="-59.860043"
+         inkscape:transform-center-x="17.646271"
+         sodipodi:linespacing="125%"
+         id="text2999-7-1-6-9"
+         y="449.99997"
+         x="868.11023"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+         xml:space="preserve"><tspan
+           sodipodi:role="line"
+           id="tspan3141"
+           x="868.11023"
+           y="449.99997">Route</tspan></text>
+    </g>
+    <g
+       id="g3211"
+       transform="translate(354.33069,177.16537)">
+      <rect
+         inkscape:transform-center-y="-27.574808"
+         inkscape:transform-center-x="124.01574"
+         ry="3.8475304"
+         y="485.43304"
+         x="442.91336"
+         height="53.149628"
+         width="141.73232"
+         id="rect3031-3-8-3-5-3-4-1-6-5-8-9"
+         style="fill:#04c800;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:2;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         inkscape:transform-center-y="-59.860043"
+         inkscape:transform-center-x="17.646271"
+         sodipodi:linespacing="125%"
+         id="text2999-7-1-2"
+         y="520.86609"
+         x="513.77954"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+         xml:space="preserve"><tspan
+           id="tspan3209"
+           sodipodi:role="line"
+           x="513.77954"
+           y="520.86609">Resources</tspan></text>
     </g>
   </g>
 </svg>
