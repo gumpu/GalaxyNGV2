@@ -353,8 +353,11 @@ Cargo ships can load stockpiles of colonists, capital and
 materials to transport them to other planets where they
 can be unloaded.  Each ship may only carry one type of
 cargo at a time.  The base amount of cargo a ship can carry is determined by
-the following formula: base cargo = cargo mass + cargo mass^2/10.  Thus, at
-cargo technology 1.00, some examples would be:
+the following formula: 
+
+    base cargo = cargo mass + cargo mass^2/10.  
+
+Thus, at cargo technology 1.00, some examples would be:
 
                    Cargo + Cargo Mass^2/10 =  Base Cargo
                     Mass                        Carried

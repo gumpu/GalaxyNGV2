@@ -13,12 +13,15 @@ class PlanetTestCase(unittest.TestCase):
     def test_dummy(self):
         pass
 
+    def test_population_growth(self):
+        pass
+
     def test_capital_production(self):
         p = Planet('Test')
         p.population = 1000.0
         p.industry   = 1000.0
         p.resources  = 10.0
-        p.production = PROD_CAPITAL
+        p.product    = PROD_CAPITAL
 
         p.produce()
         self.assertAlmostEqual( p.capital, 196.08, delta=0.005 )
@@ -28,7 +31,7 @@ class PlanetTestCase(unittest.TestCase):
         p2.industry   = 1000.0
         p2.resources  = 10.0
         p2.materials  = 200
-        p2.production = PROD_CAPITAL
+        p2.product    = PROD_CAPITAL
 
         p2.produce()
         self.assertAlmostEqual( p2.capital, 200, delta=0.05 )
@@ -38,13 +41,10 @@ class PlanetTestCase(unittest.TestCase):
         p3.industry   = 1000.0
         p3.resources  = 0.1
         p3.materials  = 0
-        p3.production = PROD_CAPITAL
+        p3.product    = PROD_CAPITAL
 
         p3.produce()
         self.assertAlmostEqual( p3.capital, 66.67, delta=0.05 )
-
-
-
 
 
 
