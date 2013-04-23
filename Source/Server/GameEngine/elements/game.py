@@ -12,11 +12,25 @@ class Game(object):
         self.turn = []
         self.ukey = UKey()
 
-    """Create a new game
-    """
     def create(self, game_options):
+        """Create a new game
+        """
         # Create turn 0
         self.turn.append(Turn())
         self.turn[0].create(game_options)
 
+    def run(self, orders_set):
+        """Given a set with orders for one or
+        more nations compute the next turn in
+        the game,
+        """
+        pass
+
+    def report(self):
+        """Create the turn reports.
+        """
+        pass
+
+    def statistics(self):
+        pass
 
