@@ -3,5 +3,7 @@
 class Fleet(object):
 
     def __init__( self ):
-        pass
+        self.groups = None
+        self.name   = None
+
 
