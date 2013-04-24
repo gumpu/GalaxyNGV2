@@ -13,9 +13,10 @@ class Universe(object):
         self.size    = size
         self.planets = {}
 
-    """Create a new universe populated with planets and nations.  
-    """
     def create(self, options):
+        """Create a new universe populated with planets and nations.
+        """
+        self.size = options.universe_size
         for i in xrange(0,10) :
             name = "%d" % i
             a_planet = Planet(name=name)
@@ -25,9 +26,9 @@ class Universe(object):
             # TODO: Make sure two planets
             # do not occupy the same location
 
-    """Places a planet in a unique location
-    """
     def place_planet(self, a_planet):
+        """Places a planet in a unique location
+        """
         a_planet.x = randint(0,self.size)
         a_planet.y = randint(0,self.size)
 

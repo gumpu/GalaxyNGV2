@@ -21,9 +21,9 @@ class Planet(object):
 
     """Planet -- base class for a kinds of planets
     """
-    def __init__(self, name):
-        self.x = 0
-        self.y = 0
+    def __init__( self, name ):
+        self.x = 0    # Integer  | x and y are used as a key
+        self.y = 0    # Integer  | so we can't have floats here.
         self.name = name
         self.size = 0
         self.population = 0
@@ -39,31 +39,31 @@ class Planet(object):
     """Compute the distance between this planet and
     another planet.
     """
-    def dist(self, another_planet):
+    def dist( self, another_planet ):
         return 0
 
 
     """Gives a unique key that says the same during
     the whole game.
     """
-    def key(self):
+    def key( self ):
         k = "%d,%d" % (self.x, self.y)
         return k
 
-    def report(self):
-        print ( "%s %d %d" % (self.name, self.x, self.y) )
+    def report( self ):
+        print ( "%s %d %d" % ( self.name, self.x, self.y ) )
 
-    def grow_population(self):
+    def grow_population( self ):
         self.population = self.population * POPULATION_GROWTH_FACTOR
         if self.population > self.size :
             surplus = self.population - self.size
             self.population = self.size
             self.colonists = surplus / POP_PER_COL
 
-    def grow_industry(self):
+    def grow_industry( self ):
         pass
 
-    def produce(self):
+    def produce( self ):
         """Let the planet produce the set product.
 
         Possible products are:
