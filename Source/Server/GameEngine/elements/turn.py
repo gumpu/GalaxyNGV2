@@ -1,6 +1,7 @@
 # vi: spell spl=en
 
 from elements.universe import Universe
+from elements.nation   import Nation
 
 class Turn(object):
     """Data for a single turn
@@ -11,9 +12,13 @@ class Turn(object):
         self.nations  = {}
         self.number   = 0
 
-    def create( self, game_options ):
+    def create( self, options, ukey ):
+        for i in xrange(0, options.number_of_nations):
+            name = "Nation_%d" % (i+1)
+            a_nation = Nation( ukey.next(), name ) 
+            self.nations[a_nation.key] = a_nation
         self.universe = Universe()
-        self.universe.create()
+        self.universe.create( options )
 
     def report( self ):
         self.universe.report()

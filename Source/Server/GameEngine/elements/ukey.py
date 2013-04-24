@@ -14,7 +14,7 @@ class UKey(object):
     def __init__(self):
         self.unique_key = 1
 
-    def next_key(self):
+    def next(self):
         """Get the next unique key
         """
 

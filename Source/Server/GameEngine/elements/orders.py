@@ -11,7 +11,7 @@ class Orders(object):
         pass
 
     def syntax_check(self):
-        """Check the syntax of all lines in this ordes.
+        """Check the syntax of all lines in this orders.
 
         Orders can still fail because of semantic reasons
         later.
