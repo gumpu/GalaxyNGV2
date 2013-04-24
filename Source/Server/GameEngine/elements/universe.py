@@ -35,7 +35,12 @@ class Universe(object):
     def distance(self, planet1, planet2):
         return 0
 
-    def report(self):
+    def report( self ):
         for (key,p) in iter(sorted(self.planets.items())) :
             p.report()
+
+    def map( self, map_file ):
+        map_file.write( "x,y,name\n" )
+        for p in self.planets.itervalues() :
+            map_file.write( "%d,%d,%s\n" % (p.x, p.y, p.name) )
 

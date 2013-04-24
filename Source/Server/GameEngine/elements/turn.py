@@ -23,3 +23,6 @@ class Turn(object):
     def report( self ):
         self.universe.report()
 
+    def map( self, file ):
+        self.universe.map( file )
+

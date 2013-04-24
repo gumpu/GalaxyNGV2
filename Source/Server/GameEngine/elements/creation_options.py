@@ -9,3 +9,8 @@ class CreationOptions(object):
         self.number_of_nations = 4
         self.number_of_empty_planets = 10
         self.universe_size = 400
+
+    def load( filename ):
+        """Load the options from file"""
+        pass
+
