@@ -42,6 +42,7 @@ class Universe(object):
         """
         pn = planet_namer()
         self.size = options.universe_size
+
         for owner in nations.itervalues():
             a_planet = Planet( name=pn.next() )
 
@@ -59,8 +60,12 @@ class Universe(object):
                         "Cannot place home planet far enough from other home planets." )
             key = a_planet.key()
             a_planet.owner = owner.key
-            self.planets[key] = a_planet
+            # Make it official
+            self.add_planet(  a_planet )
 
+    def add_planet( self, a_planet ):
+        key = a_planet.key()
+        self.planets[key] = a_planet
 
     def place_planet( self, a_planet ):
         """Places a planet in a unique location
