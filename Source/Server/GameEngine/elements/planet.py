@@ -34,7 +34,7 @@ class Planet(object):
         self.materials  = 0
         self.colonists  = 0
         self.capital    = 0
-
+        self.owner      = None
 
     """Compute the distance between this planet and
     another planet.

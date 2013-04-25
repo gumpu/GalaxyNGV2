@@ -18,7 +18,7 @@ class Turn(object):
             a_nation = Nation( ukey.next(), name ) 
             self.nations[ a_nation.key ] = a_nation
         self.universe = Universe()
-        self.universe.create( options )
+        self.universe.create( options, self.nations )
 
     def report( self ):
         self.universe.report()

@@ -6,9 +6,11 @@ class CreationOptions(object):
     is to be created at turn 0.
     """
     def __init__( self ):
-        self.number_of_nations = 4
+        self.number_of_nations = 40
         self.number_of_empty_planets = 10
         self.universe_size = 400
+        # Minimum distance between the primary home planets of any two nations
+        self.min_distance = 40
 
     def load( filename ):
         """Load the options from file"""
