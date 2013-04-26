@@ -182,13 +182,12 @@ can contain one or more ships all of the same type, in the same place,
 carrying the same quantity and type of cargo (if any) and built with the same
 technology levels.
 
-Groups can be ordered to travel to another planet, 
-intercept other ships, reverse course, 
-break off ships into a new group, join a fleet, leave a fleet, upgrade
-technology levels, load cargo, or unload cargo.  Groups may also be scrapped,
-which automatically unloads all cargo and deposits the materials used to
-produce the ships at the current planet.  If routes have been established,
-groups will follow them.
+Groups can be ordered to travel to another planet, intercept other ships,
+reverse course, break off ships into a new group, join a fleet, leave a fleet,
+upgrade technology levels, load cargo, or unload cargo.  Groups may also be
+scrapped, which automatically unloads all cargo and deposits the materials
+used to produce the ships at the current planet.  If routes have been
+established, groups will follow them.
 
 Each group is assigned a number, which is used to issue orders to ships in the
 corresponding group.  When new groups are created, they are assigned a number

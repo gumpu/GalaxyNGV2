@@ -1,5 +1,7 @@
 # vi: spell spl=en
 
+import random
+
 # The products a planet can produce.
 PROD_CAPITAL  = 1
 PROD_SHIP     = 2
@@ -36,12 +38,14 @@ class Planet(object):
         self.capital    = 0
         self.owner      = None
 
-    """Compute the distance between this planet and
-    another planet.
-    """
-    def dist( self, another_planet ):
-        return 0
+    def create_primary( self ):
+        self.size       = 1000
+        self.population = 1000
+        self.resources  = 10
 
+    def create_stuff( self ):
+        self.size      = random.randint( 10, 300 )
+        self.resources = random.expovariate( 1 )
 
     """Gives a unique key that says the same during
     the whole game.

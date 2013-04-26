@@ -9,3 +9,10 @@ clean :
 tags :
 	ctags -R .
 
+map.png : map.csv map.r
+	R --vanilla < map.r
+
+map.csv : galaxy.py
+	./galaxy.py create test
+	./galaxy.py map    test
+

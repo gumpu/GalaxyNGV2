@@ -24,5 +24,5 @@ class Turn(object):
         self.universe.report()
 
     def map( self, file ):
-        self.universe.map( file )
+        self.universe.map( file, self.nations )
 

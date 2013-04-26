@@ -42,10 +42,14 @@ class Universe(object):
         """
         pn = planet_namer()
         self.size = options.universe_size
+        self.add_primairy_home_planets( pn, options, nations )
+        self.add_stuff_planets( pn, options )
 
+    def add_primairy_home_planets( self, pn, options, nations ):
+        """Adds primary home planets for all nations"""
         for owner in nations.itervalues():
             a_planet = Planet( name=pn.next() )
-
+            a_planet.create_primary()
             for n in xrange( 0, 100 ):
                 self.place_planet( a_planet )
                 far_enough = True
@@ -61,6 +65,14 @@ class Universe(object):
             key = a_planet.key()
             a_planet.owner = owner.key
             # Make it official
+            self.add_planet(  a_planet )
+
+    def add_stuff_planets( self, pn, options ):
+        for n in xrange( 0, options.number_of_stuff_planets ):
+            a_planet = Planet( name=pn.next() )
+            a_planet.create_stuff()
+            a_planet.owner = 0
+            self.place_planet( a_planet )
             self.add_planet(  a_planet )
 
     def add_planet( self, a_planet ):
@@ -87,8 +99,12 @@ class Universe(object):
         for (key,p) in iter(sorted(self.planets.items())) :
             p.report()
 
-    def map( self, map_file ):
-        map_file.write( "x,y,name\n" )
+    def map( self, map_file, nations ):
+        map_file.write( "x,y,name,owner,size\n" )
         for p in self.planets.itervalues() :
-            map_file.write( "%d,%d,%s\n" % (p.x, p.y, p.name) )
+            if p.owner in nations :
+                owner_name = nations[ p.owner ].name
+            else:
+                owner_name = 'Unoccupied'
+            map_file.write( "%d,%d,%s,%s,%f\n" % (p.x, p.y, p.name, owner_name, p.size ) )
 
