@@ -20,9 +20,27 @@ class Turn(object):
         self.universe = Universe()
         self.universe.create( options, self.nations )
 
+    def planet_owner( a_planet ):
+        """Find the name of the nation that owns the given
+        planet if any.
+        """
+
+        if a_planet.owner in nations :
+            owner_name = nations[ a_planet.owner ].name
+        else:
+            owner_name = 'Unoccupied'
+
+        return owner_name
+
+
     def report( self ):
         self.universe.report()
 
     def map( self, file ):
-        self.universe.map( file, self.nations )
+        """Write a csv file with data on all planets
+        that can be used to create a map.
+
+        For debugging and development.
+        """
+        self.universe.map( file, self )
 

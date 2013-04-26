@@ -99,12 +99,9 @@ class Universe(object):
         for (key,p) in iter(sorted(self.planets.items())) :
             p.report()
 
-    def map( self, map_file, nations ):
+    def map( self, map_file, turn ):
         map_file.write( "x,y,name,owner,size\n" )
         for p in self.planets.itervalues() :
-            if p.owner in nations :
-                owner_name = nations[ p.owner ].name
-            else:
-                owner_name = 'Unoccupied'
-            map_file.write( "%d,%d,%s,%s,%f\n" % (p.x, p.y, p.name, owner_name, p.size ) )
+            map_file.write( "%d,%d,%s,%s,%f\n" % 
+                    (p.x, p.y, p.name, turn.planet_owner( p ), p.size ) )
 
