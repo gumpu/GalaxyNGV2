@@ -10,17 +10,27 @@ from elements.planet   import Planet
 class UniverseTestCase(unittest.TestCase):
 
     def test_place_planet( self ):
+        """Trying adding 40 planets in a large universe"""
         universe = Universe()
-        universe.size = 5  # So no more than 25 planets can fit
-        for n in xrange( 0, 25 ):
+        universe.size = 500  
+        for n in xrange( 0, 40 ):
             a_planet = Planet( name='test' )
             universe.place_planet( a_planet )
             universe.add_planet( a_planet )
+        self.assertEqual( len( universe.planets ), 40 )
 
-        a_planet = Planet( name='test' )
-        # This should raise an exception
+
+    def test_place_planet_exception( self ):
+        """Trying to add to many planets should fail"""
+        universe = Universe()
+        universe.size = 5  # So no more than 36 planets can fit
         with self.assertRaises( PlanetPlacementError ):
-            universe.place_planet( a_planet )
+            # This should raise an exception
+            for n in xrange( 0, 40 ):
+                a_planet = Planet( name='test' )
+                universe.place_planet( a_planet )
+                universe.add_planet( a_planet )
+
 
     def test_distance( self ):
         p1 = Planet( '1' )

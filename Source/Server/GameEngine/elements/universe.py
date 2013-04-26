@@ -64,6 +64,7 @@ class Universe(object):
             self.add_planet(  a_planet )
 
     def add_planet( self, a_planet ):
+        """Add a planet to the administration"""
         key = a_planet.key()
         self.planets[key] = a_planet
 
@@ -72,8 +73,15 @@ class Universe(object):
         """
         a_planet.x = randint( 0, self.size )
         a_planet.y = randint( 0, self.size )
-        # TODO: Make sure two planets
-        # do not occupy the same location
+        n = 0
+        while a_planet.key() in self.planets :
+            n = n + 1
+            if n > 100 :
+                raise PlanetPlacementError(
+                        "Can't place planet at unique location. Universe is full?" 
+                        )
+            a_planet.x = randint( 0, self.size )
+            a_planet.y = randint( 0, self.size )
 
     def report( self ):
         for (key,p) in iter(sorted(self.planets.items())) :
