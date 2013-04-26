@@ -22,14 +22,14 @@ if args.game_name:
 if args.command == 'create':
     game = Game()
     game.create( CreationOptions() )
-    with open('test.pickel', 'w') as f:
+    with open('test.pickle', 'w') as f:
         p.dump( game, f )
 elif args.command == 'run' :
-    with open('test.pickel', 'r') as f:
+    with open('test.pickle', 'r') as f:
         game = p.load(f)
         game.turn[0].report()
 elif args.command == 'map':
-    with open('test.pickel', 'r') as f:
+    with open('test.pickle', 'r') as f:
         game = p.load( f )
         with open('map.csv', 'w') as mf:
             game.map( mf )
