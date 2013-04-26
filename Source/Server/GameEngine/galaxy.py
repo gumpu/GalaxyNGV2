@@ -9,7 +9,7 @@ from elements.creation_options import CreationOptions
 
 parser = argparse.ArgumentParser()
 # parser.add_argument( '--dump',   help="Dump game data", metavar="GAME_NAME" )
-parser.add_argument( 'command',    help="create | run | dump | map" )
+parser.add_argument( 'command',    help="create | run | dump | map | report" )
 parser.add_argument( 'game_name',  help="Name of the game" )
 
 args = parser.parse_args()
@@ -33,4 +33,8 @@ elif args.command == 'map':
         game = p.load( f )
         with open('map.csv', 'w') as mf:
             game.map( mf )
+elif args.command == 'report':
+    with open('test.pickle', 'r') as f:
+        game = p.load( f )
+        game.report()
 

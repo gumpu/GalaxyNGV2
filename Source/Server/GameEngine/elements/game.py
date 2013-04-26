@@ -2,6 +2,7 @@
 
 from elements.turn import Turn
 from elements.ukey import UKey
+from report.turn_report import TurnReport
 
 class Game(object):
 
@@ -28,7 +29,11 @@ class Game(object):
     def report( self ):
         """Create the turn reports.
         """
-        pass
+        turn_reports = []
+        for a_nation in self.turn[-1].nations.itervalues():
+            a_report = TurnReport( a_nation, len( self.turn ) )
+            a_report.gather( self.turn[-1] )
+            turn_reports.append( a_report )
 
     def statistics( self ):
         pass
@@ -36,6 +41,8 @@ class Game(object):
 
     def map( self, file ):
         """Create a map of the universe"""
-        self.turn[0].map( file )
+
+        # Always make the map for the latest turn.
+        self.turn[-1].map( file )
 
 
