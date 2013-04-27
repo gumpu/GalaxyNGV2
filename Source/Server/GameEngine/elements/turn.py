@@ -4,11 +4,11 @@ from elements.universe import Universe
 from elements.nation   import Nation
 
 class Turn(object):
-    """Data for a single turn.
+    """All data for a single turn.
     """
 
     def __init__( self ):
-        self.universe = None
+        self.universe = Universe()
         self.nations  = {}
         self.number   = 0
 
@@ -17,12 +17,16 @@ class Turn(object):
 
         Create the universe, nations, and a whole bunch of planets.
         """
+        # Create all nations.
         for i in xrange( 0, options.number_of_nations ):
             name = "Nation_%d" % (i+1)
             a_nation = Nation( ukey.next(), name ) 
             self.nations[ a_nation.key ] = a_nation
-        self.universe = Universe()
+        # Now create all planets
         self.universe.create( options, self.nations )
+
+    def all_nations( self ):
+        return self.nations.itervalues()
 
     def planet_owner( self, a_planet ):
         """Find the name of the nation that owns the given

@@ -40,6 +40,8 @@ class Universe(object):
         """iterator for all planets"""
         return self.planets.itervalues()
 
+    def occupied_planets( self ):
+        return itertools.ifilter( lambda p: p.is_occupied(), self.all_planets() )
 
     def unoccupied_planets( self ):
         return itertools.ifilter( lambda p: not p.is_occupied(), self.all_planets() )

@@ -59,6 +59,11 @@ class Planet(object):
         """
         return self.owner is not None
 
+    def is_owner( self, a_nation ):
+        """Is the given nation the owner of this planet?
+        """
+        return self.owner == a_nation.key
+
     def grow_population( self ):
         self.population = self.population * POPULATION_GROWTH_FACTOR
         if self.population > self.size :
