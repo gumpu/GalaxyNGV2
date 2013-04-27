@@ -3,7 +3,7 @@
 from elements.planet import Planet
 from random import randint
 import math
-
+import itertools
 
 def planet_namer():
     """Generator for the initial names of the planets"""
@@ -36,6 +36,17 @@ class Universe(object):
         self.size    = size
         self.planets = {}
 
+    def all_planets( self ):
+        """iterator for all planets"""
+        return self.planets.itervalues()
+
+
+    def unoccupied_planets( self ):
+        return itertools.ifilter( lambda p: not p.is_occupied(), self.all_planets() )
+
+    def observed_planets( self, a_nation ):
+        """iterator for all planets observed by the nation"""
+        return None  # TODO
 
     def create( self, options, nations ):
         """Create a new universe populated with planets and nations.
@@ -71,7 +82,6 @@ class Universe(object):
         for n in xrange( 0, options.number_of_stuff_planets ):
             a_planet = Planet( name=pn.next() )
             a_planet.create_stuff()
-            a_planet.owner = 0
             self.place_planet( a_planet )
             self.add_planet(  a_planet )
 

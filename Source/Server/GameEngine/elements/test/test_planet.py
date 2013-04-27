@@ -7,17 +7,20 @@ from   elements.planet import Planet, PROD_CAPITAL
 
 class PlanetTestCase(unittest.TestCase):
 
-    def test_key(self):
-        pass
+    def test_population_growth( self ):
+        """TODO"""
+        self.assertTrue( False ) # TODO
 
-    def test_dummy(self):
-        pass
-
-    def test_population_growth(self):
-        pass
+    def test_is_occupied( self ):
+        """Is planet occupied test"""
+        p = Planet( 'Test' )
+        self.assertTrue( not p.is_occupied() )
+        p.owner = 1
+        self.assertTrue( p.is_occupied() )
 
     def test_capital_production(self):
-        p = Planet('Test')
+        """Production of capital for various planet sizes"""
+        p = Planet( 'Test' )
         p.population = 1000.0
         p.industry   = 1000.0
         p.resources  = 10.0
@@ -45,7 +48,6 @@ class PlanetTestCase(unittest.TestCase):
 
         p3.produce()
         self.assertAlmostEqual( p3.capital, 66.67, delta=0.05 )
-
 
 
 if __name__=='__main__':

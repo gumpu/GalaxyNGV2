@@ -3,6 +3,7 @@
 
 
 import argparse
+import random
 import cPickle as p
 from elements.game import Game
 from elements.creation_options import CreationOptions
@@ -11,6 +12,9 @@ parser = argparse.ArgumentParser()
 # parser.add_argument( '--dump',   help="Dump game data", metavar="GAME_NAME" )
 parser.add_argument( 'command',    help="create | run | dump | map | report" )
 parser.add_argument( 'game_name',  help="Name of the game" )
+
+# This makes debugging much easier.
+random.seed( 11111967 )
 
 args = parser.parse_args()
 

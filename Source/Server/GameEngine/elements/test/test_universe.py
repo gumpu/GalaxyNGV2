@@ -31,8 +31,8 @@ class UniverseTestCase(unittest.TestCase):
                 universe.place_planet( a_planet )
                 universe.add_planet( a_planet )
 
-
     def test_distance( self ):
+        """Computing distances between planets"""
         p1 = Planet( '1' )
         p2 = Planet( '2' )
         self.assertEqual( distance( p1, p2 ), 0 )

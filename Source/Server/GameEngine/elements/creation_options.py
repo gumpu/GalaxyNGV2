@@ -7,10 +7,10 @@ class CreationOptions(object):
     """
     def __init__( self ):
         self.number_of_nations = 8
+        # Size, both height and width
         self.universe_size = 400
         # Minimum distance between the primary home planets of any two nations
         self.min_distance = 40
-
         # The number of smaller empty planets that are scattered around
         # the universe.
         self.number_of_stuff_planets = 10

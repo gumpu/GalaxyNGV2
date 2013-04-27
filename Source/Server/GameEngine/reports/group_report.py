@@ -1,0 +1,4 @@
+
+class GroupReport(object):
+    pass
+

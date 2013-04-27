@@ -51,8 +51,13 @@ class Planet(object):
     the whole game.
     """
     def key( self ):
-        k = "%d,%d" % (self.x, self.y)
+        k = "%d,%d" % (self.x, self.y)  # TODO use format
         return k
+
+    def is_occupied( self ):
+        """Is this planet occupied by a nation?
+        """
+        return self.owner is not None
 
     def grow_population( self ):
         self.population = self.population * POPULATION_GROWTH_FACTOR

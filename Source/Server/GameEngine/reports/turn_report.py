@@ -32,12 +32,16 @@ class TurnReport(object):
             a_planet_report = PlanetReport( a_turn, self.nation, a_planet )
             self.planets.append( a_planet_report )
 
+        # Handy to have them sorted, makes reports more readable.
+        self.planets = sorted( self.planets, key=lambda x : '{:>30}'.format( x.name ) )
+
+
     def report_in_text( self, report_file ):
         """Create a plain text turn report from all
         the information in this report.
         """
         report_file.write( 'Unoccupied Planets\n' )
-        report_file.write( 'x,y,size,resources\n' )
+        report_file.write( 'name,x,y,size,resources\n' )
         for i in itertools.ifilter( lambda p: p.owner == 'Unoccupied', self.planets ):
             report_file.write( "{0},{1},{2},{3},{4}\n".format( 
                 i.name, i.x, i.y, i.size, i.resources ) )

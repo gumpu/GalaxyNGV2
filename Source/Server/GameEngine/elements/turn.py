@@ -45,3 +45,20 @@ class Turn(object):
         """
         self.universe.map( file, self )
 
+    def is_planet_visible( self, a_planet, a_nation ):
+        """Is the given planet visible to the nation?
+
+        This can be because the nations owns the planet,
+        or has a group orbiting the planet.
+        """
+        return True  # TODO
+
+    def is_group_visible( self, a_group, a_nation ):
+        """Is the given group visible to the nation?
+
+        This can be because the nation owns the group
+        or has a group orbiting the same planet as
+        the group is orbiting.
+        """
+        return True # TODO
+
