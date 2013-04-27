@@ -2,7 +2,7 @@
 
 from elements.turn import Turn
 from elements.ukey import UKey
-from report.turn_report import TurnReport
+from reports.turn_report import TurnReport
 
 class Game(object):
 
