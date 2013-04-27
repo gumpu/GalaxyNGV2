@@ -1,7 +1,8 @@
 # vi: spell spl=en
 
 clean :
-	make -C elements
+	make -C elements clean
+	make -C reports  clean
 	rm -rf *.pyc
 	rm -rf *.pdf *.csv *.png
 	rm -rf tags
