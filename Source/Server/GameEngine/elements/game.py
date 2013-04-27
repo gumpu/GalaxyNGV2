@@ -27,17 +27,19 @@ class Game(object):
         pass
 
     def report( self ):
-        """Create the turn reports.
+        """Create the turn reports for each nation in the game.
+
+        Returns an array of turn reports.
         """
         turn_reports = []
         for a_nation in self.turn[-1].nations.itervalues():
             a_report = TurnReport( a_nation, len( self.turn ) )
             a_report.gather( self.turn[-1] )
             turn_reports.append( a_report )
+        return turn_reports
 
     def statistics( self ):
         pass
-
 
     def map( self, file ):
         """Create a map of the universe"""

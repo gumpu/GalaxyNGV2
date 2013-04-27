@@ -36,7 +36,7 @@ class Planet(object):
         self.materials  = 0
         self.colonists  = 0
         self.capital    = 0
-        self.owner      = None
+        self.owner      = None   # Nation key or None
 
     def create_primary( self ):
         self.size       = 1000
@@ -53,9 +53,6 @@ class Planet(object):
     def key( self ):
         k = "%d,%d" % (self.x, self.y)
         return k
-
-    def report( self ):
-        print ( "%s %d %d" % ( self.name, self.x, self.y ) )
 
     def grow_population( self ):
         self.population = self.population * POPULATION_GROWTH_FACTOR

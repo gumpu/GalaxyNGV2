@@ -4,7 +4,7 @@ from elements.universe import Universe
 from elements.nation   import Nation
 
 class Turn(object):
-    """Data for a single turn
+    """Data for a single turn.
     """
 
     def __init__( self ):
@@ -13,6 +13,10 @@ class Turn(object):
         self.number   = 0
 
     def create( self, options, ukey ):
+        """The big bang, this makes the turn 0 data.
+
+        Create the universe, nations, and a whole bunch of planets.
+        """
         for i in xrange( 0, options.number_of_nations ):
             name = "Nation_%d" % (i+1)
             a_nation = Nation( ukey.next(), name ) 
@@ -20,21 +24,18 @@ class Turn(object):
         self.universe = Universe()
         self.universe.create( options, self.nations )
 
-    def planet_owner( a_planet ):
+    def planet_owner( self, a_planet ):
         """Find the name of the nation that owns the given
         planet if any.
-        """
 
-        if a_planet.owner in nations :
-            owner_name = nations[ a_planet.owner ].name
+        Return the name of the owner, or 'Unoccupied'.
+        """
+        if a_planet.owner in self.nations :
+            owner_name = self.nations[ a_planet.owner ].name
         else:
             owner_name = 'Unoccupied'
 
         return owner_name
-
-
-    def report( self ):
-        self.universe.report()
 
     def map( self, file ):
         """Write a csv file with data on all planets

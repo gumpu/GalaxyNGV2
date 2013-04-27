@@ -1,4 +1,7 @@
+#!/usr/bin/python -3
 # vi: spell spl=en
+
+import itertools
 
 from reports.planet_report import PlanetReport
 
@@ -26,12 +29,15 @@ class TurnReport(object):
         nation for which this report is.
         """
         for a_planet in a_turn.universe.planets.itervalues():
-            a_planet_report = PlanetReport( self.nation, a_planet )
+            a_planet_report = PlanetReport( a_turn, self.nation, a_planet )
             self.planets.append( a_planet_report )
 
-    def report_in_text( self ):
+    def report_in_text( self, report_file ):
         """Create a plain text turn report from all
         the information in this report.
         """
-        pass
-
+        report_file.write( 'Unoccupied Planets\n' )
+        report_file.write( 'x,y,size,resources\n' )
+        for i in itertools.ifilter( lambda p: p.owner == 'Unoccupied', self.planets ):
+            report_file.write( "{0},{1},{2},{3},{4}\n".format( 
+                i.name, i.x, i.y, i.size, i.resources ) )

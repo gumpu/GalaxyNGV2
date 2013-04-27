@@ -81,7 +81,11 @@ class Universe(object):
         self.planets[key] = a_planet
 
     def place_planet( self, a_planet ):
-        """Places a planet in a unique location
+        """Places a planet in a unique location.
+
+        We select a random location and test if it occupied, if we so we try
+        again.  If that does not succeed after 100 times the galaxy is either
+        full or almost full.
         """
         a_planet.x = randint( 0, self.size )
         a_planet.y = randint( 0, self.size )
