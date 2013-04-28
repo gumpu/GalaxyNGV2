@@ -3,6 +3,7 @@ class NationReport(object):
 
     def __init__( self, a_nation, a_turn ):
         self.name = a_nation.name
+        self.key  = a_nation.key
         self.population = 0
         self.industry   = 0
         self.drive_tech   = a_nation.drive_tech

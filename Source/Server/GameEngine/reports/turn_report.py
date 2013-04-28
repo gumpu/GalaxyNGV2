@@ -64,10 +64,27 @@ class TurnReport(object):
                 i.name, i.population, i.industry,
                 i.drive_tech, i.weapons_tech,
                 i.shield_tech, i.cargo_tech ) )
-        report_file.write( '\n' )
-        report_file.write( 'Unoccupied Planets\n' )
+        report_file.write( '\nUnoccupied Planets\n' )
         report_file.write( 'name,x,y,size,resources\n' )
         for i in self.unoccupied_planets:
-            report_file.write( "{0:<4} {1:4} {2:4} {3:4} {4}\n".format( 
-                i.name, i.x, i.y, i.size, i.resources ) )
+            report_file.write( 
+                    "{0:<4} {1:4} {2:4} {3:4} {4}\n".format( 
+                        i.name, i.x, i.y, i.size, i.resources ) )
+
+        for a_nation in self.nations:
+            found = False
+            for i in self.occupied_planets:
+                if i.owner == a_nation.key:
+                    found = True
+                    break
+            if found :
+                report_file.write( 
+                        "\n{}'s Planets\n".format( a_nation.name ) )
+                for i in self.occupied_planets:
+                    if i.owner == a_nation.key :
+                        report_file.write(
+                            "{0:<4} {1:4} {2:4} {3:4} {4} {5} {6} {7} {8}\n".format( 
+                                i.name, i.x, i.y, i.size, i.resources,
+                                i.population, i.industry,
+                                i.size, i.resources ) )
 
