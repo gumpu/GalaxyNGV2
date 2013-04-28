@@ -1,5 +1,12 @@
 # vi: spell spl=en
 
+all : .report
+
+.report :
+	./galaxy.py create test
+	./galaxy.py report test
+	cat /tmp/Nation_3.txt
+
 clean :
 	make -C elements clean
 	make -C reports  clean
@@ -16,4 +23,5 @@ map.png : map.csv map.r
 map.csv : galaxy.py
 	./galaxy.py create test
 	./galaxy.py map    test
+
 

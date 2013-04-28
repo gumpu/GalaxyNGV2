@@ -2,11 +2,12 @@
 
 from elements.universe import Universe
 from elements.nation   import Nation
+import random
+
 
 class Turn(object):
     """All data for a single turn.
     """
-
     def __init__( self ):
         self.universe = Universe()
         self.nations  = {}
@@ -55,7 +56,7 @@ class Turn(object):
         This can be because the nations owns the planet,
         or has a group orbiting the planet.
         """
-        return True  # TODO
+        return random.random() < 0.5  # TODO, this is just for testing.
 
     def is_group_visible( self, a_group, a_nation ):
         """Is the given group visible to the nation?

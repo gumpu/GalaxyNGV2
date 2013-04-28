@@ -41,6 +41,7 @@ class Planet(object):
     def create_primary( self ):
         self.size       = 1000
         self.population = 1000
+        self.industry   = 1000
         self.resources  = 10
 
     def create_stuff( self ):

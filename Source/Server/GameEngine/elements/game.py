@@ -33,7 +33,7 @@ class Game(object):
         """
         turn_reports = []
         for a_nation in self.turn[-1].nations.itervalues():
-            a_report = TurnReport( a_nation, len( self.turn ) )
+            a_report = TurnReport( a_nation, len( self.turn ) - 1 )
             a_report.gather( self.turn[-1] )
             turn_reports.append( a_report )
         return turn_reports
