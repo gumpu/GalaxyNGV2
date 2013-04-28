@@ -47,4 +47,13 @@ Possible dataformats for these:
 1. CherryPie
 2. Django
 
+
+
+##Resources
+
+1. http://www.json.org/js.html
+2. http://jqfundamentals.com/
+
+
+
 vi: spell spl=en ft=markdown
