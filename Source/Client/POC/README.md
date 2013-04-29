@@ -53,7 +53,7 @@ Possible dataformats for these:
 
 1. http://www.json.org/js.html
 2. http://jqfundamentals.com/
-
-
+3. https://developer.mozilla.org/en-US/docs/HTML/Canvas/Tutorial
+4. http://www.ibm.com/developerworks/web/library/wa-games/
 
 vi: spell spl=en ft=markdown

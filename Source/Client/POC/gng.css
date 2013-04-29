@@ -1,3 +1,5 @@
+/* vi: spell spl=en 
+ */
 
 canvas {
     border:1px solid;
@@ -16,6 +18,7 @@ canvas#toolbar {
 
 div#content {
     width:700px;
+    background-color:#AAAAAA;
 }
 
 div#title {
