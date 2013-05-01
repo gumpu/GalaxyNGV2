@@ -27,5 +27,6 @@ def convert_to_builtin_type( obj ):
 if __name__=='__main__':
 
     uni = Universe()
+    # indent=4 makes it readable to save bytes leave it out.
     print json.dumps( uni, indent=4, default=convert_to_builtin_type )
 
