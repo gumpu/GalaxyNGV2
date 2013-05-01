@@ -1,5 +1,3 @@
-
-
 #Possible technologies
 
 ##Languages
@@ -48,12 +46,26 @@ Possible dataformats for these:
 2. Django
 
 
+#Development
 
-##Resources
+To test run
+
+    python -m SimpleHTTPServer
+
+then browse to http://0.0.0.0:8000/gng.html
+
+
+#Resources
 
 1. http://www.json.org/js.html
 2. http://jqfundamentals.com/
 3. https://developer.mozilla.org/en-US/docs/HTML/Canvas/Tutorial
 4. http://www.ibm.com/developerworks/web/library/wa-games/
+5. https://developer.mozilla.org/en-US/docs/JavaScript/A_re-introduction_to_JavaScript
+
+
+
+
+
 
 vi: spell spl=en ft=markdown

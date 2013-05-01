@@ -29,6 +29,7 @@ $( document ).ready(function() {
         y: canvas.offset().top
     };
 
+    if ( false ) {
     canvas.mousemove( function(e) {
         // use pageX and pageY to get the mouse position
         // relative to the browser window
@@ -40,6 +41,15 @@ $( document ).ready(function() {
         // now you have local coordinates,
         // which consider a (0,0) origin at the
         // top-left of canvas element
+    });
+    }
+
+    $.getJSON("dummy.json", function(data) {
+        console.log(data);
+        console.log(data.planets.p488);
+
+        // data is a JavaScript object now. Handle it as such
+
     });
 });
 
