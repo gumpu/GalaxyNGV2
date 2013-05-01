@@ -20,7 +20,6 @@ When finished the orders are posted to the webserver and stored on disk.
 
 A few times a week the game engines reads all orders and runs a turn.
 
-
 ##Client
 
 TODO
@@ -35,6 +34,12 @@ The web server and game engine are written in Python.
 
 The client is written in Javascript.
 
+##Security
+
+Security on the game master's side is more important than
+preventing in game cheating.
+
+The attack surface of the web server should be as small as possible.
 
 ##Limits
 
