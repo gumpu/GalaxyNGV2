@@ -1,7 +1,10 @@
 
 
-.lint : gng.html
+.lint : gng.html dummy.json
 	xmllint gng.html
+
+.jsonlint :
+	jsonlint -v dummy.json
 
 
 dummy.json : create_dummy_json_report.py

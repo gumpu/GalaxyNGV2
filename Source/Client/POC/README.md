@@ -34,6 +34,8 @@ Possible dataformats for these:
 ##Development
 
 1. Firebug
+2. jslint
+3. nodejs  - javascript on the command line!
 
 ##Pipeline
 
@@ -63,7 +65,7 @@ Then browse to <http://0.0.0.0:8000/gng.html>.
 5. <https://developer.mozilla.org/en-US/docs/JavaScript/A_re-introduction_to_JavaScript>
 6. <https://github.com/rwldrn/idiomatic.js>
 7. <http://www.masswerk.at/JavaPac/JS-PacMan2.html>
-
+8. <http://javascript.crockford.com/code.html>  Coding standard
 
 
 
