@@ -12,3 +12,7 @@ dummy.json : create_dummy_json_report.py
 
 clean :
 	rm -rf dummy.json
+
+coordtrans.pdf : coordtrans.svg
+	inkscape --export-pdf=$@ $<
+
