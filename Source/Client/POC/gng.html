@@ -6,18 +6,21 @@
         <title>GalaxyNG Viewer</title>
     </head>
     <body>
-        <script src="jquery-1.9.1.min.js"></script>
-        <script src="gng.js"></script>
         <div id="content">
             <div id="title">Title</div>
-            <div id="cleft"> <canvas id="toolbar" class="clear"></canvas> </div>
-            <div id="rleft"> <canvas id="map"     class="clear"></canvas> </div>
+            <!-- setting canvas width and height in CSS gives strange results -->
+            <div id="cleft"> <canvas width="60"  height="300" id="toolbar"></canvas> </div>
+            <div id="rleft"> <canvas width="600" height="300" id="map" ></canvas> </div>
             <div id="logbar">
                 <p>Some text..........</p> 
                 <p>Some text..........</p> 
                 <p>Some text..........</p> 
             </div>
         </div>
+
+        <script src="jquery-1.9.1.min.js"></script>
+        <script src="map.js"></script>
+        <script src="gng.js"></script>
     </body>
 </html>
 

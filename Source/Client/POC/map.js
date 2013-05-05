@@ -1,17 +1,11 @@
 // vi: spell spl=en
 
-// Viewport
-//
-
-var translate = { dx:0, dy:0 };
-var scale     = { s:1 };
-
-var planets = [ {x:10,y:20}, {x:12,y:3}, {x:25,y:30} ];
+var planets = [ {x:10,y:50}, {x:120,y:30}, {x:25,y:200} ];
 
 MapViewer = function( a_planet_list ) {
     // The number of planets will not change.
-    var viewport_size = { width:100, height:50 };
-    var canvas_size   = { width:50,  height:25 };
+    var viewport_size = { width:600, height:300 };
+    var canvas_size   = { width:600, height:300 };
     var n = a_planet_list.length;
     return {
         translate : function ( translation ) {
@@ -29,15 +23,23 @@ MapViewer = function( a_planet_list ) {
                 a_planet.cy = (canvas_size.height - a_planet.vy) * scale;
             }
         },
+        draw : function( ctx ) {
+            for ( var i = 0; i < n; i++ ) {
+                a_planet = a_planet_list[ i ];
+                console.log( a_planet );
+                ctx.fillStyle = "rgba(0, 0, 200, 1.0)";
+                ctx.fillRect( a_planet.cx, a_planet.cy, 5, 5 );
+            }
+        },
         view : function () {
             console.log( a_planet_list );
         } }
 }( planets );
 
-//console.log( MapViewer );
+console.log( MapViewer );
 
-MapViewer.view();
-MapViewer.translate( { x:10, y:12 } );
-MapViewer.project();
-MapViewer.view();
+// MapViewer.view();
+// MapViewer.translate( { x:10, y:12 } );
+// MapViewer.project();
+// MapViewer.view();
 

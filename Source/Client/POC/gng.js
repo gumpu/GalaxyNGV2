@@ -6,19 +6,20 @@
 $( document ).ready(function() {
     console.log( 'ready!' );
 
-    // var canvas = document.getElementById('map');
-    var canvas = $('#map');
-    if (canvas.getContext){
-        var ctx = canvas.getContext('2d');
+    //var canvas = document.getElementById('map');
+    var canvas = $('canvas#map');
+    if (canvas[0].getContext){
+        var ctx = canvas[0].getContext('2d');
         // drawing code here
         console.log( 'ready to draw!' );
-        ctx.fillStyle = "rgb(200,0,0)";
-        ctx.fillRect (10, 10, 55, 50);
-     
-        ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-        ctx.fillRect (30, 30, 55, 50);
+
+        MapViewer.translate( { x:0, y:0 } );
+        MapViewer.project( );
+        MapViewer.draw( ctx );
+        MapViewer.view();
     } else {
-          // canvas-unsupported code here
+        // canvas-unsupported code here
+        console.log( 'Where is the canvas!' );
     }
 
     //  var canvas = $('#my_canvas');
@@ -28,6 +29,7 @@ $( document ).ready(function() {
         x: canvas.offset().left,
         y: canvas.offset().top
     };
+    console.log( canvasPosition );
 
     if ( false ) {
     canvas.mousemove( function(e) {
@@ -44,12 +46,12 @@ $( document ).ready(function() {
     });
     }
 
+    if ( false ) {
     $.getJSON("dummy.json", function(data) {
         console.log(data);
-        console.log(data.planets.p488);
-
+        //console.log(data.planets.p488);
         // data is a JavaScript object now. Handle it as such
-
     });
+    }
 });
 
