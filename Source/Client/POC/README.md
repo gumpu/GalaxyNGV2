@@ -43,9 +43,9 @@ Possible dataformats for these:
 
 ##Webserver
 
-1. CherryPie
+1. CherryPie - Maybe, but is an extra dependency.
 2. Django - over kill
-3. SimpleHTTPServer
+3. SimpleHTTPServer - Works out of the box.
 
 #Development
 

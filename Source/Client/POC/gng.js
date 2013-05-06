@@ -31,27 +31,31 @@ $( document ).ready(function() {
     };
     console.log( canvasPosition );
 
-    if ( false ) {
-    canvas.mousemove( function(e) {
-        // use pageX and pageY to get the mouse position
-        // relative to the browser window
-        var mouse = {
-            x: e.pageX - canvasPosition.x,
+    if ( true ) {
+        canvas.mousemove( function(e) {
+            // use pageX and pageY to get the mouse position
+            // relative to the browser window
+            var mouse = {
+                x: e.pageX - canvasPosition.x,
             y: e.pageY - canvasPosition.y
-        }
-        console.log( 'click' + mouse.x + ',' + mouse.y );
-        // now you have local coordinates,
-        // which consider a (0,0) origin at the
-        // top-left of canvas element
-    });
+            }
+            console.log( 'click' + mouse.x + ',' + mouse.y );
+            // now you have local coordinates,
+            // which consider a (0,0) origin at the
+            // top-left of canvas element
+
+            MapViewer.translate( { x:mouse.x, y:mouse.y } );
+            MapViewer.project( );
+            MapViewer.draw( ctx );
+        });
     }
 
     if ( false ) {
-    $.getJSON("dummy.json", function(data) {
-        console.log(data);
-        //console.log(data.planets.p488);
-        // data is a JavaScript object now. Handle it as such
-    });
+        $.getJSON("dummy.json", function(data) {
+            console.log(data);
+            //console.log(data.planets.p488);
+            // data is a JavaScript object now. Handle it as such
+        });
     }
 });
 

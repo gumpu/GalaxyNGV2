@@ -2,6 +2,13 @@
 
 var planets = [ {x:10,y:50}, {x:120,y:30}, {x:25,y:200} ];
 
+var i;
+
+for ( i = 0; i < 100; ++i ) {
+    planets[ i ] = { x:Math.random()*600, y:Math.random()*600 };
+}
+
+
 MapViewer = function( a_planet_list ) {
     // The number of planets will not change.
     var viewport_size = { width:600, height:300 };
@@ -24,6 +31,7 @@ MapViewer = function( a_planet_list ) {
             }
         },
         draw : function( ctx ) {
+            ctx.clearRect(0, 0, canvas_size.width, canvas_size.height);
             for ( var i = 0; i < n; i++ ) {
                 a_planet = a_planet_list[ i ];
                 console.log( a_planet );
