@@ -66,7 +66,7 @@ Then browse to <http://0.0.0.0:8000/gng.html>.
 6. <https://github.com/rwldrn/idiomatic.js>
 7. <http://www.masswerk.at/JavaPac/JS-PacMan2.html>
 8. <http://javascript.crockford.com/code.html>  Coding standard
-
+9. <http://www.html5rocks.com/en/tutorials/canvas/performance/>
 
 
 vi: spell spl=en ft=markdown

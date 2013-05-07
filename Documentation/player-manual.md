@@ -1,5 +1,3 @@
-vi: spell spl=en ft=markdown
-
 #Player Manual
 
 For GalaxyNG V2
@@ -640,4 +638,4 @@ A number of things follow from this:
 
 
 
-
+vi: spell spl=en ft=markdown
