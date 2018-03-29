@@ -2,5 +2,5 @@
 
 clean :
 	rm -rf *.pyc
-	make -C test
+#	make -C test
 
