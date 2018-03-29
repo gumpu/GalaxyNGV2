@@ -1,7 +1,5 @@
-# vi: spell spl=en
 
-class Group(object):
-
+class Group():
     """TODO
     """
 
@@ -12,5 +10,4 @@ class Group(object):
         self.planet        = None
         self.destination   = None
         self.distance_left = 0
-
 

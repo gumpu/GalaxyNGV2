@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import unittest
-from elements.shiptype import Shiptype
+from ngengine.elements.shiptype import Shiptype
 
 
 class ShiptypeTestCase(unittest.TestCase):

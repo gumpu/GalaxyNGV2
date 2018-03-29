@@ -3,7 +3,7 @@
 #
 
 import unittest
-from   elements.planet import Planet, PROD_CAPITAL
+from   ngengine.elements.planet import Planet, PROD_CAPITAL
 
 class PlanetTestCase(unittest.TestCase):
 

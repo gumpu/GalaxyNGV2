@@ -1,8 +1,7 @@
-# vi: spell spl=en
 
-class Nation(object):
+class Nation():
 
-    def __init__( self, key, name ):
+    def __init__(self, key, name):
         self.key  = key
         self.name = name
         self.drive_tech   = 1.0

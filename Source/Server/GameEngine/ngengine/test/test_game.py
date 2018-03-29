@@ -3,9 +3,9 @@
 #
 
 import unittest
-import cPickle as p
-from elements.game import Game
-from elements.creation_options import CreationOptions
+import pickle as p
+from ngengine.game import Game
+from ngengine.creation_options import CreationOptions
 
 class GameTestCase(unittest.TestCase):
 

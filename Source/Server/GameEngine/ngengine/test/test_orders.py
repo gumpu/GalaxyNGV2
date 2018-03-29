@@ -3,12 +3,11 @@
 #
 
 import unittest
-from   elements.orders import Orders
+from   ngengine.orders import Orders
 
 class OrdersTestCase(unittest.TestCase):
     def test_dummy(self):
         pass
-
 
 if __name__=='__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(OrdersTestCase)

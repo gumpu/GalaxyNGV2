@@ -1,6 +1,6 @@
 # vi: spell spl=en
 
-from elements.planet import Planet
+from ngengine.elements.planet import Planet
 from random import randint
 import math
 import itertools
@@ -31,22 +31,22 @@ class Universe(object):
 
     """Planet -- base class for a kinds of planets
     """
-    def __init__( self, size=400 ):
+    def __init__(self, size=400):
         self.owner   = None
         self.size    = size
         self.planets = {}
 
-    def all_planets( self ):
+    def all_planets(self):
         """iterator for all planets"""
-        return self.planets.itervalues()
+        return self.planets.values()
 
-    def occupied_planets( self ):
-        return itertools.ifilter( lambda p: p.is_occupied(), self.all_planets() )
+    def occupied_planets(self):
+        return [p for p in self.all_planets() if p.is_occupied()]
 
-    def unoccupied_planets( self ):
-        return itertools.ifilter( lambda p: not p.is_occupied(), self.all_planets() )
+    def unoccupied_planets(self):
+        return [p for p in self.all_planets() if not p.is_occupied()]
 
-    def observed_planets( self, a_nation ):
+    def observed_planets(self, a_nation):
         """iterator for all planets observed by the nation"""
         return None  # TODO
 
@@ -55,18 +55,18 @@ class Universe(object):
         """
         pn = planet_namer()
         self.size = options.universe_size
-        self.add_primairy_home_planets( pn, options, nations )
-        self.add_stuff_planets( pn, options )
+        self.add_primairy_home_planets(pn, options, nations)
+        self.add_stuff_planets(pn, options)
 
-    def add_primairy_home_planets( self, pn, options, nations ):
+    def add_primairy_home_planets(self, pn, options, nations):
         """Adds primary home planets for all nations"""
-        for owner in nations.itervalues():
-            a_planet = Planet( name=pn.next() )
+        for owner in nations.values():
+            a_planet = Planet(name=next(pn))
             a_planet.create_primary()
-            for n in xrange( 0, 100 ):
-                self.place_planet( a_planet )
+            for n in range(0, 100):
+                self.place_planet(a_planet)
                 far_enough = True
-                for other_planet in self.planets.itervalues():
+                for other_planet in self.planets.values():
                     if distance( other_planet, a_planet ) < options.min_distance :
                         far_enough = False
                 if far_enough :
@@ -80,12 +80,12 @@ class Universe(object):
             # Make it official
             self.add_planet(  a_planet )
 
-    def add_stuff_planets( self, pn, options ):
-        for n in xrange( 0, options.number_of_stuff_planets ):
-            a_planet = Planet( name=pn.next() )
+    def add_stuff_planets(self, pn, options):
+        for n in range(0, options.number_of_stuff_planets):
+            a_planet = Planet(name=next(pn))
             a_planet.create_stuff()
-            self.place_planet( a_planet )
-            self.add_planet(  a_planet )
+            self.place_planet(a_planet)
+            self.add_planet(a_planet)
 
     def add_planet( self, a_planet ):
         """Add a planet to the administration"""

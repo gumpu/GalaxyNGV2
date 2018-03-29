@@ -1,8 +1,8 @@
 
 import unittest
-from elements.ukey import UKey
-from elements.creation_options import CreationOptions
-from elements.turn import Turn
+from ngengine.ukey import UKey
+from ngengine.creation_options import CreationOptions
+from ngengine.turn import Turn
 
 def count_them( an_iterator ):
     n = 0
@@ -23,16 +23,16 @@ class TurnTestCase(unittest.TestCase):
                count_them( turn.universe.all_planets() ),
                options.number_of_nations +
                options.number_of_stuff_planets )
-        self.assertEqual( 
+        self.assertEqual(
                count_them( turn.universe.unoccupied_planets() ),
                options.number_of_stuff_planets )
 
-        self.assertEqual( 
-               count_them( turn.all_nations() ),
-               options.number_of_nations )
+        self.assertEqual(
+               count_them(turn.all_nations()),
+               options.number_of_nations)
 
-        a_nation = turn.all_nations().next()
-        self.assertEqual( a_nation.drive_tech, 1.0 )
+        nations = turn.all_nations()
+        self.assertEqual(nations[0].drive_tech, 1.0)
 
 if __name__=='__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(TurnTestCase)
