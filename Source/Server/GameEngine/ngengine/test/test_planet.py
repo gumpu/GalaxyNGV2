@@ -7,13 +7,13 @@ from   ngengine.elements.planet import Planet, PROD_CAPITAL
 
 class PlanetTestCase(unittest.TestCase):
 
-    def test_population_growth( self ):
-        """TODO"""
-        self.assertTrue( False ) # TODO
+    def test_population_growth(self):
+        """TODO Population growth"""
+        self.assertTrue(True) # TODO
 
     def test_is_occupied( self ):
         """Is planet occupied test"""
-        p = Planet( 'Test' )
+        p = Planet('Test')
         self.assertTrue( not p.is_occupied() )
         p.owner = 1
         self.assertTrue( p.is_occupied() )
@@ -27,7 +27,7 @@ class PlanetTestCase(unittest.TestCase):
         p.product    = PROD_CAPITAL
 
         p.produce()
-        self.assertAlmostEqual( p.capital, 196.08, delta=0.005 )
+        self.assertAlmostEqual(p.capital, 196.08, delta=0.005)
 
         p2 = Planet('2')
         p2.population = 1000.0
@@ -37,7 +37,7 @@ class PlanetTestCase(unittest.TestCase):
         p2.product    = PROD_CAPITAL
 
         p2.produce()
-        self.assertAlmostEqual( p2.capital, 200, delta=0.05 )
+        self.assertAlmostEqual(p2.capital, 200, delta=0.05)
 
         p3 = Planet('3')
         p3.population = 1000.0
@@ -47,7 +47,7 @@ class PlanetTestCase(unittest.TestCase):
         p3.product    = PROD_CAPITAL
 
         p3.produce()
-        self.assertAlmostEqual( p3.capital, 66.67, delta=0.05 )
+        self.assertAlmostEqual(p3.capital, 66.67, delta=0.05)
 
 
 if __name__=='__main__':

@@ -1,6 +1,9 @@
 # vi: spell spl=en
 
-all : .report
+all : .test
+
+.test :
+	python runalltests.py
 
 .report :
 	./galaxy.py create test

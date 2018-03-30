@@ -1,5 +1,6 @@
 from ngengine.elements import planet, nation, group
 from ngengine.ukey import UKey
+from ngengine.turn import Turn
 
 class Game():
 
@@ -13,7 +14,9 @@ class Game():
     def create(self, game_options):
         """Create a new game
         """
-        pass
+        turn = Turn()
+        turn.create(game_options, self.ukey)
+        self.turn.append(turn)
 
     def run(self, orders_set):
         pass
@@ -25,17 +28,17 @@ class Game():
         """
         turn_reports = []
         for a_nation in self.turn[-1].nations.itervalues():
-            a_report = TurnReport( a_nation, len( self.turn ) - 1 )
-            a_report.gather( self.turn[-1] )
-            turn_reports.append( a_report )
+            a_report = TurnReport( a_nation, len( self.turn )-1)
+            a_report.gather(self.turn[-1])
+            turn_reports.append(a_report)
         return turn_reports
 
-    def statistics( self ):
+    def statistics(self):
         pass
 
-    def map( self, file ):
+    def map(self, file):
         """Create a map of the universe"""
 
         # Always make the map for the latest turn.
-        self.turn[-1].map( file )
+        self.turn[-1].map(file)
 
