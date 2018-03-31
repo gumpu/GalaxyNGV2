@@ -6,8 +6,8 @@ all : .test
 	python runalltests.py
 
 .report :
-	./galaxy.py create test
-	./galaxy.py report test
+	./bin/galaxy.py create test
+	./bin/galaxy.py report test
 	cat /tmp/Nation_3.txt
 
 clean :

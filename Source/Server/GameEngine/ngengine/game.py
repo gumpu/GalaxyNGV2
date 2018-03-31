@@ -1,7 +1,7 @@
 from ngengine.elements import planet, nation, group
 from ngengine.ukey import UKey
 from ngengine.turn import Turn
-
+from ngengine.reports.turn_report import TurnReport
 class Game():
 
     """Game -- all data for a single game.
@@ -27,8 +27,8 @@ class Game():
         Returns an array of turn reports.
         """
         turn_reports = []
-        for a_nation in self.turn[-1].nations.itervalues():
-            a_report = TurnReport( a_nation, len( self.turn )-1)
+        for a_nation in self.turn[-1].nations.values():
+            a_report = TurnReport(a_nation, len(self.turn )-1)
             a_report.gather(self.turn[-1])
             turn_reports.append(a_report)
         return turn_reports
