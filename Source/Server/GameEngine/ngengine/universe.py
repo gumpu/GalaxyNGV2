@@ -18,14 +18,12 @@ def distance( planet1, planet2 ):
     dy = planet1.y - planet2.y
     return math.sqrt( dx*dx + dy*dy )
 
-
 class PlanetPlacementError(Exception):
     def __init__(self, value):
         self.value = value
 
     def __str__(self):
         return repr(self.value)
-
 
 class Universe(object):
 
@@ -78,7 +76,7 @@ class Universe(object):
             key = a_planet.key()
             a_planet.owner = owner.key
             # Make it official
-            self.add_planet(  a_planet )
+            self.add_planet(a_planet)
 
     def add_stuff_planets(self, pn, options):
         for n in range(0, options.number_of_stuff_planets):
@@ -115,9 +113,9 @@ class Universe(object):
         for (key,p) in iter(sorted(self.planets.items())) :
             p.report()
 
-    def map( self, map_file, turn ):
-        map_file.write( "x,y,name,owner,size\n" )
-        for p in self.planets.itervalues() :
-            map_file.write( "%d,%d,%s,%s,%f\n" % 
-                    (p.x, p.y, p.name, turn.planet_owner( p ), p.size ) )
+    def map(self, map_file, turn):
+        map_file.write("x,y,name,owner,size\n")
+        for p in self.planets.values() :
+            map_file.write("%d,%d,%s,%s,%f\n" %
+                    (p.x, p.y, p.name, turn.planet_owner( p ),p.size ))
 

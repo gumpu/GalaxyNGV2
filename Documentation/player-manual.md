@@ -1,4 +1,4 @@
-#Player Manual
+# Player Manual
 
 For GalaxyNG V2
 
@@ -6,7 +6,7 @@ Version 0.1
 
 April 2013
 
-##Introduction
+## Introduction
 
 GalaxyNG is a multiplayer game of interstellar war.  The objective of the game
 is to conquer the galaxy.
@@ -18,7 +18,7 @@ a few months to a year or more.  The Game Master (GM) maintains the server,
 selects game options, creates the galaxy, answers player questions and solves
 problems.
 
-###The Galaxy
+### The Galaxy
 
 The area of the galaxy in which the game is played is a square (for the sake
 of simplicity the third dimension is ignored) which contains a number of
@@ -28,14 +28,14 @@ colonize uninhabited planets, haul cargo, conduct warfare and conquer planets
 inhabited by other nations.  Technology improvements allow ships to fly faster
 and farther, haul more cargo and fight better.
 
-###Players
+### Players
 
 Each player is the leader of one nation.  Players can communicate by sending
 messages or email to each other.  Players are anonymous but can choose to
 reveal their identities to other players.  Players can provide their real name
 to the GM for inclusion in the Hall of Fame without breaking their anonymity.
 
-###Victory and Defeat
+### Victory and Defeat
 
 The game can be won by a single nation or by an alliance of nations, depending
 upon the game settings.  Nations are ranked based on the total production of
@@ -43,7 +43,7 @@ their planets.  A nation is eliminated if it owns no planets and has no ships.
 The game is complete when all surviving players agree to end it and notify the
 game master.
 
-###Names
+### Names
 
 Nations, planets, ship types and fleets can be named.  Names may be no more than
 twenty characters (a character is a letter, digit, or underscore) and may not
@@ -54,7 +54,7 @@ simply be known by number, e.g. Nation\_4 or Nation\_5.  Ship types are given na
 when designed and can be renamed.  Planets are numbered at the start of the
 game and can be given new names by their current owner.
 
-###Units of Measure
+### Units of Measure
 
 Distances are measured in light-years.  Each unit of population represents ten
 million people and each unit of capital or materials represents ten million
@@ -69,19 +69,19 @@ planet reported at 138.44,43.29 with 4.30 resources is actually at that
 location and will not be found at 138.4426,43.28934 with 4.3032 resources.
 Negative numbers are not used in GalaxyNG.
 
-##Planets
+## Planets
 
 Planets are located in the galaxy by X and Y coordinates.  Planets have seven
 characteristics: owner, size, population, industry, resources, production and
 stockpiles.
 
-###Owner
+### Owner
 
 Inhabited planets are owned by one nation at a time (except in the special case
 of a standoff when an inhabited planet is unowned).  Uninhabited planets are
 not owned by any nation.
 
-###Size
+### Size
 
 Planets vary in size from 0.01 to 1000.00 (GMs can create larger planets).
 The size of a planet reflects the habitability of the terrain, the suitability
@@ -90,7 +90,7 @@ game, the galaxy is usually divided into inhabited planets (home planets),
 uninhabited development planets (size 200.00 to 1000.00) and uninhabited stuff
 planets (size 0.01 to 200.00).
 
-###Population
+### Population
 
 Each inhabited planet has a population, which can never be larger than the
 planet's size but may be smaller.  A planet with zero population is
@@ -99,7 +99,7 @@ Each planet's population grows by 8% per turn.  Excess population is
 stockpiled as colonists.  Each unit of colonists represents eight
 population.
 
-###Industry
+### Industry
 
 Each inhabited planet has industry, which can never be larger than the
 planet's population but may be smaller.  If population exceeds industry, the
@@ -112,7 +112,7 @@ stockpile of 100 capital, on the following turn the population and industry
 will both increase to 216 and there will be 84 capital left (because
 population grows by 8% per turn).
 
-###Resources
+### Resources
 
 Each planet has a resources value which indicates how rich it is in metals,
 coal, oil, wood and other products.  Home planets have a resources value of
@@ -121,7 +121,7 @@ average being 1.00.  Planets high in resources can easily produce materials
 such as sheet steel, copper wire and
 plastics.  Materials are necessary to build ships and produce capital.
 
-###Stockpiles
+### Stockpiles
 
 Each planet may have stockpiles of colonists, capital and materials.
 Population increases beyond the planet's size are converted into colonists.
@@ -131,7 +131,7 @@ materials are stockpiled at a one-to-one ratio.  Stockpiles may be saved for
 later use or transported to other planets by cargo ships.
 
 
-##Ships
+## Ships
 
 Ships are organized into groups and fleets which are used for exploration,
 scouting, attack, defence and cargo transport.  Ships have the following
@@ -141,7 +141,7 @@ weapons technology, shields technology, cargo technology, cargo carried type,
 cargo carried mass, destination planet, and distance to destination planet.
 Ships can be built at planets.
 
-###Ship Types
+### Ship Types
 
 Each player can design ship types, which are unique to that player, by
 specifying: name, drive mass (the power of the hyperdrive engines), attacks
@@ -172,7 +172,7 @@ ship types are:
 Players can change the name of an existing ship type.  Ship types can be
 eliminated if no ships of that type exist or are under construction.
 
-###Groups
+### Groups
 
 A nation can have hundreds or even thousands of ships, which would be
 inconvenient to handle individually.  Hence ships are handled in groups, which
@@ -205,7 +205,7 @@ automatically sorted and renumbered as follows: Owner's groups at owner's
 planets; Owner's groups at other nation's planets; Owner's groups at uninhabited
 planets; Owner's groups in fleets.
 
-###Fleets
+### Fleets
 
 Fleets contain groups, allowing players to gather different ship types
 together in a single unit.  Many of the orders for groups can also be used for
@@ -219,7 +219,7 @@ removed from the fleet.  Ships in a fleet that are broken from groups are also
 removed from the fleet.  Groups in fleets that are ordered to upgrade, load or
 unload cargo remain in the fleet.  Groups in fleets will not travel on routes.
 
-###Technology
+### Technology
 
 Technology determines the effectiveness of ships.  There are four
 technologies: drive, weapons, shields and cargo.  Each nation begins the game
@@ -237,7 +237,7 @@ Ships without a component are considered to have a matching technology of
 zero.  For example, a ship with weapons mass zero is considered to have
 weapons technology zero.
 
-###Ship Mass
+### Ship Mass
 
 Ship types with zero or one attack have a ship mass of drive mass + weapon
 mass + shield mass + cargo mass.  Each additional attack beyond the first adds
@@ -262,7 +262,7 @@ mass + shield mass + cargo mass.  Each additional attack beyond the first adds
     MegaFreighter  120.00 +    0.00 +        0         +   38.43 + 39.57 = 198.00
 
 
-###Movement
+### Movement
 
 Ships are equipped with hyperspace drives, except ships with a drive mass of
 zero which remain forever at the planet where they were built.  Hyperspace
@@ -290,7 +290,7 @@ Groups in hyperspace that are more than four turns from their destination
 planet may be ordered to reverse course and return to their planet of origin.
 This is useful for retrieving groups accidentally sent to the wrong planet.
 
-###Speed
+### Speed
 
 Ships move a number of light years per turn according to the following formula:
 
@@ -329,7 +329,7 @@ Note that, when fully loaded, cargo ships can be much slower.  For example:
     Freighter      20 *  1.00 * (  30.00 / (  49.50 +     20.00     )) =  8.63
     MegaFreighter  20 *  1.00 * ( 120.00 / ( 198.00 +    196.14     )) =  6.09
 
-###Locating Ships
+### Locating Ships
 
 Each nation's administrative staff will keep a record of its own ships on
 planets or in hyperspace.  Planet owners have full knowledge of all ships
@@ -344,7 +344,7 @@ inbound to a planet).  A rough indication of the location of other alien
 groups is indicated on the text map, but their mass, speed
 and direction of travel are unknown.
 
-###Cargo
+### Cargo
 
 Cargo ships can load stockpiles of colonists, capital and
 materials to transport them to other planets where they
@@ -377,7 +377,7 @@ their nation.  Each colonist becomes eight population.  Capital and materials
 unloaded at an uninhabited planet will be stockpiled until the planet is
 colonized.
 
-###Routes
+### Routes
 
 Colonists, capital, materials, and empty routes can be established between
 planets.  Each planet can be the origin for only one route of each type.  A
@@ -410,7 +410,7 @@ at route destinations occurs regardless of the status of the autounload
 option.
 
 
-##Production
+## Production
 
 The productive capacity of a planet is determined mostly by its industry value
 and partly by its population.  Each unit of industry on a planet yields one
@@ -435,7 +435,7 @@ one planet can produce two things in two turns.  A planet will continue
 producing the same thing until it is ordered to change production, thus new
 production orders are not required for each planet each turn.
 
-###Materials
+### Materials
 
 Materials production is determined by the resources values of the planet,
 which equals the number of materials that will be produced per point of
@@ -443,7 +443,7 @@ production devoted to the task.  For example, a planet with 5.00 resources and
 100.00 production will produce 500.00 materials, while a planet with 0.10
 resources would only produce 10.00 materials.
 
-###Capital
+### Capital
 
 Producing 1.00 capital requires 5.00 production and 1.00 materials.  If the
 planet does not have a stockpile of materials, some production will
@@ -452,7 +452,7 @@ automatically be diverted to producing materials.  For example, a planet with
 capital.  With no stockpile of materials and 10.00 resources, 196.08 capital
 will be produced.  With 0.10 resources, the planet will produce 66.67 capital.
 
-###Technology
+### Technology
 
 A planet can research one of the four technologies each turn.  It costs
 5,000.00 production to increase drive, weapons, or shields technology by one
@@ -462,7 +462,7 @@ on research into Weapons, your weapons technology will go up by 0.10.
 Research takes effect on the following turn and applies to all new and
 upgraded ships, regardless of which planet conducted the research.
 
-###Ship Building
+### Ship Building
 
 A planet can produce one type of ship each turn.  The production cost of a
 ship is equal to its ship mass times ten.  In addition, one unit of materials
@@ -504,7 +504,7 @@ If the planet's production is changed, the extra ship production is lost and
 any materials produced on the previous turn are added to the planet's
 stockpiles.
 
-###Upgrading Groups
+### Upgrading Groups
 
 Groups can be upgraded at the owning player's planets.  Groups that are
 upgraded cannot be ordered to travel to another planet or intercept an enemy
@@ -539,9 +539,9 @@ technology or ships as normal.  If a planet uses its entire production on
 upgrades, it produces nothing that turn.
 
 
-##Combat
+## Combat
 
-###War and Alliances
+### War and Alliances
 
 At the start of the game all nations are assumed to be at war with all the other
 nations (except in team games).  Alliances may be declared at the beginning of
@@ -553,7 +553,7 @@ war with each other; declaring an alliance puts warships at no disadvantage in
 combat).  Having declared an alliance, war may be declared again at the start
 of any subsequent turn and vice versa.
 
-###Fighting Battles
+### Fighting Battles
 
 Battles occur whenever a ship with weapons encounters an enemy ship at a
 planet.  Ships in hyperspace cannot participate in battles.  In each battle
@@ -583,7 +583,7 @@ as the attack strength, the attack will always fail.  The numbers are
 calculated so that if a ship type 10 1 10 10 0 fires at an identical ship, it
 will have a 50% chance of destroying the target.
 
-###Bombing Planets
+### Bombing Planets
 
 After all battles are resolved, ships with weapons bomb enemy planets,
 reducing population and industry by 75%.  Bombed planets produce capital until
@@ -598,7 +598,7 @@ more than one nation issued a victory command, or if there was a standoff, the
 planet becomes unowned and produces nothing
 until it is claimed by the first nation that unloads colonists at the planet.
 
-##Turn Sequence
+## Turn Sequence
 
 1. Planetary production orders are assigned.  Note that production occurs
    later in the turn.
@@ -633,9 +633,6 @@ A number of things follow from this:
 2. A cargo ship can be loaded, sent to another planet and unloaded in a single
    turn.
 3. One ship can bomb two planets in the same turn (though this is rare).
-
-
-
 
 
 vi: spell spl=en ft=markdown

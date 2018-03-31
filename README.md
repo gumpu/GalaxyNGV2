@@ -1,4 +1,4 @@
-#GalaxyNGV2
+# GalaxyNGV2
 
 This is a reboot of GalaxyNG.
 
@@ -12,14 +12,15 @@ and attacking neighboring nations.
 GalaxyNGV2 is a reboot of this game.  It will follow most of the original
 rules, but have a new server and web-browser based (graphical) client.
 
+It will also contain an AI to make single player gaming also possible.
 
-##Name
+## Name
 
 The name is currently GalaxyNGV2 but that just a working name and is likely to
 change.
 
 
-##Technology
+## Technology
 
 The server is written in Python and is as platform independent as possible.
 
