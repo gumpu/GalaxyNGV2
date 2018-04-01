@@ -12,6 +12,7 @@ all : .test
 
 clean :
 	make -C ngengine clean
+	rm -rf dist
 	rm -rf *.pyc
 	rm -rf *.pdf *.csv *.png
 	rm -rf tags

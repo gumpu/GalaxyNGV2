@@ -2,9 +2,14 @@ from ngengine.elements import planet, nation, group
 from ngengine.ukey import UKey
 from ngengine.turn import Turn
 from ngengine.reports.turn_report import TurnReport
+import copy
+
+
 class Game():
 
     """Game -- all data for a single game.
+
+    A game consists of a set of turns.
     """
     def __init__(self):
         self.name = None
@@ -19,7 +24,15 @@ class Game():
         self.turn.append(turn)
 
     def run(self, orders_set):
-        pass
+        """Compute new turn data
+        """
+        old_turn = self.turn[-1]
+        new_turn = copy.deepcopy(old_turn)
+        assert(id(old_turn) != id(new_turn))
+        # things happen
+        new_turn.run(orders_set)
+
+        self.turn.append(new_turn)
 
     def report( self ):
         """Create the turn reports for each nation in the game.
@@ -37,7 +50,8 @@ class Game():
         pass
 
     def map(self, file):
-        """Create a map of the universe"""
+        """Create a map of the universe
+        """
 
         # Always make the map for the latest turn.
         self.turn[-1].map(file)

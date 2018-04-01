@@ -6,14 +6,16 @@ import math
 import itertools
 
 def planet_namer():
-    """Generator for the initial names of the planets"""
+    """Generator for the initial names of the planets
+    """
     n = 0
     while True:
         n = n + 1
-        yield( str(n) )
+        yield(str(n))
 
 def distance( planet1, planet2 ):
-    """Distance between two planets in the universe"""
+    """Distance between two planets in the universe
+    """
     dx = planet1.x - planet2.x
     dy = planet1.y - planet2.y
     return math.sqrt( dx*dx + dy*dy )
@@ -26,7 +28,6 @@ class PlanetPlacementError(Exception):
         return repr(self.value)
 
 class Universe(object):
-
     """Planet -- base class for a kinds of planets
     """
     def __init__(self, size=400):
@@ -45,7 +46,8 @@ class Universe(object):
         return [p for p in self.all_planets() if not p.is_occupied()]
 
     def observed_planets(self, a_nation):
-        """iterator for all planets observed by the nation"""
+        """iterator for all planets observed by the nation
+        """
         return None  # TODO
 
     def create( self, options, nations ):
@@ -57,7 +59,8 @@ class Universe(object):
         self.add_stuff_planets(pn, options)
 
     def add_primairy_home_planets(self, pn, options, nations):
-        """Adds primary home planets for all nations"""
+        """Adds primary home planets for all nations
+        """
         for owner in nations.values():
             a_planet = Planet(name=next(pn))
             a_planet.create_primary()
@@ -65,7 +68,7 @@ class Universe(object):
                 self.place_planet(a_planet)
                 far_enough = True
                 for other_planet in self.planets.values():
-                    if distance( other_planet, a_planet ) < options.min_distance :
+                    if distance(other_planet, a_planet) < options.min_distance :
                         far_enough = False
                 if far_enough :
                     break;
@@ -85,31 +88,31 @@ class Universe(object):
             self.place_planet(a_planet)
             self.add_planet(a_planet)
 
-    def add_planet( self, a_planet ):
+    def add_planet(self, a_planet):
         """Add a planet to the administration"""
         key = a_planet.key()
         self.planets[key] = a_planet
 
-    def place_planet( self, a_planet ):
+    def place_planet(self, a_planet):
         """Places a planet in a unique location.
 
         We select a random location and test if it occupied, if we so we try
         again.  If that does not succeed after 100 times the galaxy is either
         full or almost full.
         """
-        a_planet.x = randint( 0, self.size )
-        a_planet.y = randint( 0, self.size )
+        a_planet.x = randint(0, self.size)
+        a_planet.y = randint(0, self.size)
         n = 0
         while a_planet.key() in self.planets :
             n = n + 1
             if n > 100 :
                 raise PlanetPlacementError(
-                        "Can't place planet at unique location. Universe is full?" 
+                        "Can't place planet at unique location. Universe is full?"
                         )
-            a_planet.x = randint( 0, self.size )
-            a_planet.y = randint( 0, self.size )
+            a_planet.x = randint(0, self.size)
+            a_planet.y = randint(0, self.size)
 
-    def report( self ):
+    def report(self):
         for (key,p) in iter(sorted(self.planets.items())) :
             p.report()
 

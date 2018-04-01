@@ -51,8 +51,8 @@ class Planet(object):
     """Gives a unique key that says the same during
     the whole game.
     """
-    def key( self ):
-        k = "%d,%d" % (self.x, self.y)  # TODO use format
+    def key(self):
+        k = "{},{}".format(self.x, self.y) 
         return k
 
     def is_occupied( self ):
@@ -86,6 +86,7 @@ class Planet(object):
         if self.product   == PROD_MATERIAL:
             self.materials = self.materials + industry * self.resources
         elif self.product == PROD_SHIP:
+            # TODO
             pass
         elif self.product == PROD_CAPITAL:
             material_demand = industry / IND_PER_CAP
@@ -103,5 +104,6 @@ class Planet(object):
                 self.materials = self.materials - material_demand
             self.capital = self.capital + capital
         else:
+            # Nothing to produce
             pass
 

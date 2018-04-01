@@ -20,13 +20,17 @@ class Turn(object):
         """
         # Create all nations.
         for i in range( 0, options.number_of_nations ):
-            name = "Nation_%d" % (i+1)
-            a_nation = Nation(ukey.next(), name) 
+            name = "Nation_{}".format(i+1)
+            a_nation = Nation(ukey.next(), name)
             self.nations[a_nation.key] = a_nation
         # Now create all planets
         self.universe.create(options, self.nations)
 
-    def all_nations( self ):
+    def run(self, order_set):
+        for planet in self.universe.occupied_planets():
+            planet.grow_population();
+
+    def all_nations(self):
         return self.nations.values()
 
     def planet_owner(self, a_planet):

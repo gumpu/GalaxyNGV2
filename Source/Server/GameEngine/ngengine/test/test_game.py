@@ -1,6 +1,4 @@
 #!/usr/bin/env python
-# vi: spell spl=en
-#
 
 import unittest
 import pickle
@@ -34,6 +32,31 @@ class GameTestCase(unittest.TestCase):
         k3 = a_game_2.ukey.next()
         self.assertGreater(k3, k2)
         self.assertEqual(len(a_game.turn), 1)
+
+    def test_run_game(self):
+        """Test running a games"""
+        options = CreationOptions()
+        a_game = Game()
+        # Create first turn
+        a_game.create(options)
+        # Compute next turn
+        a_game.run(None)
+
+        # There should be a new turn now.
+        self.assertEqual(len(a_game.turn), 2)
+
+        old_turn = a_game.turn[-2]
+        new_turn = a_game.turn[-1]
+        old_occupied_planets = old_turn.universe.occupied_planets()
+        new_occupied_planets = new_turn.universe.occupied_planets()
+        # The number of occupied planets should be the same.
+        self.assertEqual(len(old_occupied_planets), len(new_occupied_planets))
+
+        n1 = new_occupied_planets[1]
+        o1 = old_occupied_planets[1]
+        self.assertNotEqual(n1, o1)
+        self.assertNotEqual(n1.colonists, o1.colonists)
+
 
 if __name__=='__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(GameTestCase)
