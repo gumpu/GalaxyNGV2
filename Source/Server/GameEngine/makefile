@@ -7,6 +7,7 @@ all : .test
 
 .report :
 	./bin/galaxy.py create test
+	./bin/galaxy.py run test
 	./bin/galaxy.py report test
 	cat /tmp/Nation_3.txt
 

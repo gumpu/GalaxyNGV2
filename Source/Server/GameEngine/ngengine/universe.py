@@ -18,7 +18,7 @@ def distance( planet1, planet2 ):
     """
     dx = planet1.x - planet2.x
     dy = planet1.y - planet2.y
-    return math.sqrt( dx*dx + dy*dy )
+    return math.sqrt(dx*dx + dy*dy)
 
 class PlanetPlacementError(Exception):
     def __init__(self, value):
@@ -35,6 +35,11 @@ class Universe(object):
         self.size    = size
         self.planets = {}
 
+    def planet_exists(self, name):
+        """Does <name> exists in this Universe
+        """
+        return False
+
     def all_planets(self):
         """iterator for all planets"""
         return self.planets.values()
@@ -50,7 +55,7 @@ class Universe(object):
         """
         return None  # TODO
 
-    def create( self, options, nations ):
+    def create(self, options, nations):
         """Create a new universe populated with planets and nations.
         """
         pn = planet_namer()
@@ -120,5 +125,5 @@ class Universe(object):
         map_file.write("x,y,name,owner,size\n")
         for p in self.planets.values() :
             map_file.write("%d,%d,%s,%s,%f\n" %
-                    (p.x, p.y, p.name, turn.planet_owner( p ),p.size ))
+                    (p.x, p.y, p.name, turn.planet_owner( p ),p.size))
 

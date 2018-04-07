@@ -6,7 +6,6 @@ import copy
 
 
 class Game():
-
     """Game -- all data for a single game.
 
     A game consists of a set of turns.
@@ -28,6 +27,7 @@ class Game():
         """
         old_turn = self.turn[-1]
         new_turn = copy.deepcopy(old_turn)
+        new_turn.number = new_turn.number + 1
         assert(id(old_turn) != id(new_turn))
         # things happen
         new_turn.run(orders_set)

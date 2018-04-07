@@ -8,6 +8,8 @@ class PlanetReport(object):
         self.owner     = None
         self.size      = None
         self.resources = None
+        self.population = None
+        self.colonists = None
 
 class OccupiedPlanetReport( PlanetReport ):
     def __init__( self, a_turn, a_nation, a_planet ):
@@ -21,6 +23,7 @@ class OccupiedPlanetReport( PlanetReport ):
             self.industry   = a_planet.industry
             self.capital    = a_planet.capital
             self.materials  = a_planet.materials
+            self.colonists  = a_planet.colonists
         else:
             self.owner     = None   # Which means unknown, not visible.
 

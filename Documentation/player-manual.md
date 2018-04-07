@@ -4,7 +4,7 @@ For GalaxyNG V2
 
 Version 0.1
 
-April 2013
+April 2018
 
 ## Introduction
 
@@ -45,14 +45,14 @@ game master.
 
 ### Names
 
-Nations, planets, ship types and fleets can be named.  Names may be no more than
-twenty characters (a character is a letter, digit, or underscore) and may not
-include spaces.  Names must be unique.  For example, a nation cannot have the
-same name as a fleet.  Each player should provide a name by which their nation
-will be known, e.g. Mutant\_Camels or Zzyaxians - if this is not done they will
-simply be known by number, e.g. Nation\_4 or Nation\_5.  Ship types are given names
-when designed and can be renamed.  Planets are numbered at the start of the
-game and can be given new names by their current owner.
+Nations, planets, ship types and fleets can be named.  Names may be no more
+than twenty characters (a character is a letter, digit, or underscore) and may
+not include spaces.  Names must be unique.  For example, a nation cannot have
+the same name as a fleet.  Each player should provide a name by which their
+nation will be known, e.g. Mutant\_Camels or Zzyaxians - if this is not done
+they will simply be known by number, e.g. Nation\_4 or Nation\_5.  Ship types
+are given names when designed and can be renamed.  Planets are numbered at the
+start of the game and can be given new names by their current owner.
 
 ### Units of Measure
 
@@ -96,8 +96,7 @@ Each inhabited planet has a population, which can never be larger than the
 planet's size but may be smaller.  A planet with zero population is
 uninhabited.  Home planets are fully populated at the beginning of the game.
 Each planet's population grows by 8% per turn.  Excess population is
-stockpiled as colonists.  Each unit of colonists represents eight
-population.
+stockpiled as colonists.  Each unit of colonists represents eight population.
 
 ### Industry
 
@@ -105,7 +104,7 @@ Each inhabited planet has industry, which can never be larger than the
 planet's population but may be smaller.  If population exceeds industry, the
 industry may be increased by adding capital.  If there is not an existing
 stockpile of capital, it may be produced at the planet or be shipped in from
-another planet by cargo ships.  For example, if a size 500 planet with 500
+another planet by cargo ships.  For example, if a size 501 planet with 500
 population and 200 industry produces 75 capital, the industry will increase to
 275.  If a size 500 planet with 200 population and 200 industry has a
 stockpile of 100 capital, on the following turn the population and industry
@@ -568,20 +567,19 @@ is won if all remaining ships belong to nations that are allied with each other.
 Attack and defence strengths are calculated using the following forumlae:
 
     attack strength = (weapons mass * weapons technology)
-    defence strength = ((shield mass * shields technology) / 
+    defence strength = ((shield mass * shields technology) /
                (ship mass + effective cargo carried mass)^(1/3)) * 30^(1/3).
 
 If a shot is successful, the enemy ship is destroyed.  The attack forumula is:
 
     p[kill] = (log[4](attack strength / defence strength) + 1) / 2
 
-Where log[4](x) is the log with base 4 of x, 
-which can be computed with log(x)/log(4).
-If the attack strength is four times as strong as the defence strength, the
-attack will always succeed.  If the defence strength is four times as strong
-as the attack strength, the attack will always fail.  The numbers are
-calculated so that if a ship type 10 1 10 10 0 fires at an identical ship, it
-will have a 50% chance of destroying the target.
+Where log[4](x) is the log with base 4 of x, which can be computed with
+log(x)/log(4).  If the attack strength is four times as strong as the defence
+strength, the attack will always succeed.  If the defence strength is four
+times as strong as the attack strength, the attack will always fail.  The
+numbers are calculated so that if a ship type 10 1 10 10 0 fires at an
+identical ship, it will have a 50% chance of destroying the target.
 
 ### Bombing Planets
 
@@ -589,14 +587,14 @@ After all battles are resolved, ships with weapons bomb enemy planets,
 reducing population and industry by 75%.  Bombed planets produce capital until
 ordered to produce something else on later turns.
 
-If only one nation has ships with weapons orbiting a bombed planet, that nation
-becomes the new owner of the planet.  If two or more allied nations have ships
-with weapons orbiting a bombed planet, the nation that issued a victory command
-becomes the new owner.  If no nation issued a victory command, the nation that
-appears first in the nations table of the turn report receives the planet.  If
-more than one nation issued a victory command, or if there was a standoff, the
-planet becomes unowned and produces nothing
-until it is claimed by the first nation that unloads colonists at the planet.
+If only one nation has ships with weapons orbiting a bombed planet, that
+nation becomes the new owner of the planet.  If two or more allied nations
+have ships with weapons orbiting a bombed planet, the nation that issued a
+victory command becomes the new owner.  If no nation issued a victory command,
+the nation that appears first in the nations table of the turn report receives
+the planet.  If more than one nation issued a victory command, or if there was
+a standoff, the planet becomes unowned and produces nothing until it is
+claimed by the first nation that unloads colonists at the planet.
 
 ## Turn Sequence
 
@@ -612,7 +610,7 @@ until it is claimed by the first nation that unloads colonists at the planet.
 6. Groups load or unload cargo.
 7. Groups are upgraded.
 8. Groups and fleets sent to planets enter hyperspace.
-9. Routes are assigned to planets. Cargo ships are assigned cargos and destinations, load cargo (if necessary) and enter hyperspace.
+9. Routes are assigned to planets. Cargo ships are assigned cargo and destinations, load cargo (if necessary) and enter hyperspace.
 10. Groups and fleets with intercept orders are assigned destinations and enter hyperspace.
 11. Groups and fleets move through hyperspace, possibly arriving at planets.
 12. Groups with weapons attack enemy ships, causing combat.

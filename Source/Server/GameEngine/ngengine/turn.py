@@ -8,18 +8,18 @@ import random
 class Turn(object):
     """All data for a single turn.
     """
-    def __init__( self ):
+    def __init__(self):
         self.universe = Universe()
         self.nations  = {}
         self.number   = 0
 
-    def create( self, options, ukey ):
+    def create(self, options, ukey):
         """The big bang, this makes the turn 0 data.
 
         Create the universe, nations, and a whole bunch of planets.
         """
         # Create all nations.
-        for i in range( 0, options.number_of_nations ):
+        for i in range(0, options.number_of_nations):
             name = "Nation_{}".format(i+1)
             a_nation = Nation(ukey.next(), name)
             self.nations[a_nation.key] = a_nation
@@ -29,6 +29,14 @@ class Turn(object):
     def run(self, order_set):
         for planet in self.universe.occupied_planets():
             planet.grow_population();
+
+    def get_nation(self, nation_name):
+        """Return the nation with the given name or None
+        """
+        for nation in self.nations.values():
+            if nation.name == nation_name:
+                return nation
+        return None
 
     def all_nations(self):
         return self.nations.values()
@@ -46,15 +54,15 @@ class Turn(object):
 
         return owner_name
 
-    def map( self, file ):
+    def map(self, file):
         """Write a csv file with data on all planets
         that can be used to create a map.
 
         For debugging and development.
         """
-        self.universe.map( file, self )
+        self.universe.map(file, self)
 
-    def is_planet_visible( self, a_planet, a_nation ):
+    def is_planet_visible(self, a_planet, a_nation):
         """Is the given planet visible to the nation?
 
         This can be because the nations owns the planet,
@@ -62,7 +70,7 @@ class Turn(object):
         """
         return random.random() < 0.5  # TODO, this is just for testing.
 
-    def is_group_visible( self, a_group, a_nation ):
+    def is_group_visible(self, a_group, a_nation):
         """Is the given group visible to the nation?
 
         This can be because the nation owns the group

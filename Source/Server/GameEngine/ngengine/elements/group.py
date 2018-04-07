@@ -11,3 +11,13 @@ class Group():
         self.destination   = None
         self.distance_left = 0
 
+    def mass(self):
+        """Total mass of the group
+
+        Based on the mass of the shiptype
+        and cargo carried.
+        """
+
+        # TODO
+        pass
+

@@ -32,17 +32,17 @@ class TurnReport(object):
         nation for which this report is.
         """
         for a_nation in a_turn.all_nations():
-            a_nation_report = NationReport( a_nation, a_turn )
+            a_nation_report = NationReport(a_nation, a_turn)
             self.nations.append( a_nation_report )
 
         for a_planet in a_turn.universe.unoccupied_planets():
-            a_planet_report = UnoccupiedPlanetReport( 
-                    a_turn, self.nation, a_planet )
-            self.unoccupied_planets.append( a_planet_report )
+            a_planet_report = UnoccupiedPlanetReport(
+                    a_turn, self.nation, a_planet)
+            self.unoccupied_planets.append(a_planet_report)
 
         for a_planet in a_turn.universe.occupied_planets():
-            a_planet_report = OccupiedPlanetReport( a_turn, self.nation, a_planet )
-            self.occupied_planets.append( a_planet_report )
+            a_planet_report = OccupiedPlanetReport(a_turn, self.nation, a_planet)
+            self.occupied_planets.append(a_planet_report)
 
         # Handy to have them sorted, makes reports more readable.
         self.unoccupied_planets = sorted(
@@ -63,9 +63,9 @@ class TurnReport(object):
             report_file.write( "{0} {1} {2} {3} {4} {5} {6}\n".format(
                 i.name, i.population, i.industry,
                 i.drive_tech, i.weapons_tech,
-                i.shield_tech, i.cargo_tech ) )
-        report_file.write( '\nUnoccupied Planets\n' )
-        report_file.write( 'name,x,y,size,resources\n' )
+                i.shield_tech, i.cargo_tech ))
+        report_file.write('\nUnoccupied Planets\n')
+        report_file.write('name,x,y,size,resources\n')
         for i in self.unoccupied_planets:
             report_file.write(
                     #"{0:<4} {1:4} {2:4} {3:4} {4}\n".format(
@@ -80,12 +80,15 @@ class TurnReport(object):
                     break
             if found :
                 report_file.write(
-                        "\n{}'s Planets\n".format( a_nation.name ) )
+                        "\n{}'s Planets\n".format(a_nation.name))
+
+                report_file.write('name,x,y,population,industry,size,resources,materials,colonists\n')
                 for i in self.occupied_planets:
                     if i.owner == a_nation.key :
                         report_file.write(
-                            "{0:<4} {1:4} {2:4} {3:4} {4} {5} {6} {7} {8}\n".format( 
-                                i.name, i.x, i.y, i.size, i.resources,
+                            "{0:<4} {1} {2} {3} {4} {5} {6} {7} {8}\n".format(
+                                i.name, i.x, i.y,
                                 i.population, i.industry,
-                                i.size, i.resources ) )
+                                i.size, i.resources, i.materials,
+                                i.colonists))
 

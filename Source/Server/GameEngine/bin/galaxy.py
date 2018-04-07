@@ -70,7 +70,8 @@ if __name__ == "__main__":
     elif arguments['run']:
         with open(filename, 'rb') as f:
             game = p.load(f)
-            game.run()
+            # TODO read orders
+            game.run(None)
         with open(filename, 'wb') as f:
             p.dump(game, f)
     elif arguments['report']:
@@ -79,7 +80,7 @@ if __name__ == "__main__":
             turn_reports = game.report()
             for a_report in turn_reports:
                 with open('/tmp/{}.txt'.format(a_report.nation.name), 'w') as report_file:
-                    a_report.report_in_text( report_file )
+                    a_report.report_in_text(report_file)
     elif arguments['map']:
         with open(filename, 'rb') as f :
             game = p.load(f)

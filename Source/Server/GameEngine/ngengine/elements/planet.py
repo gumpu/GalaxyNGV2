@@ -38,21 +38,21 @@ class Planet(object):
         self.capital    = 0
         self.owner      = None   # Nation key or None
 
-    def create_primary( self ):
+    def create_primary(self):
         self.size       = 1000
         self.population = 1000
         self.industry   = 1000
         self.resources  = 10
 
-    def create_stuff( self ):
-        self.size      = random.randint( 10, 300 )
-        self.resources = random.expovariate( 1 )
+    def create_stuff(self):
+        self.size      = random.randint(10, 300)
+        self.resources = random.expovariate(1)
 
-    """Gives a unique key that says the same during
-    the whole game.
-    """
     def key(self):
-        k = "{},{}".format(self.x, self.y) 
+        """Gives a unique key that says the same during
+        the whole game.
+        """
+        k = "{},{}".format(self.x, self.y)
         return k
 
     def is_occupied( self ):
