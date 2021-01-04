@@ -6,12 +6,12 @@ import random
 
 
 class Turn(object):
-    """All data for a single turn.
-    """
+    """All data for a single turn."""
+
     def __init__(self):
         self.universe = Universe()
-        self.nations  = {}
-        self.number   = 0
+        self.nations = {}
+        self.number = 0
 
     def create(self, options, ukey):
         """The big bang, this makes the turn 0 data.
@@ -20,7 +20,7 @@ class Turn(object):
         """
         # Create all nations.
         for i in range(0, options.number_of_nations):
-            name = "Nation_{}".format(i+1)
+            name = "Nation_{}".format(i + 1)
             a_nation = Nation(ukey.next(), name)
             self.nations[a_nation.key] = a_nation
         # Now create all planets
@@ -28,11 +28,10 @@ class Turn(object):
 
     def run(self, order_set):
         for planet in self.universe.occupied_planets():
-            planet.grow_population();
+            planet.grow_population()
 
     def get_nation(self, nation_name):
-        """Return the nation with the given name or None
-        """
+        """Return the nation with the given name or None"""
         for nation in self.nations.values():
             if nation.name == nation_name:
                 return nation
@@ -47,10 +46,10 @@ class Turn(object):
 
         Return the name of the owner, or 'Unoccupied'.
         """
-        if a_planet.owner in self.nations :
-            owner_name = self.nations[ a_planet.owner ].name
+        if a_planet.owner in self.nations:
+            owner_name = self.nations[a_planet.owner].name
         else:
-            owner_name = 'Unoccupied'
+            owner_name = "Unoccupied"
 
         return owner_name
 
@@ -77,5 +76,4 @@ class Turn(object):
         or has a group orbiting the same planet as
         the group is orbiting.
         """
-        return True # TODO
-
+        return True  # TODO

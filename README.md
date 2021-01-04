@@ -19,13 +19,11 @@ It will also contain an AI to make single player gaming also possible.
 The name is currently GalaxyNGV2 but that just a working name and is likely to
 change.
 
-
 ## Technology
 
 The server is written in Python and is as platform independent as possible.
 
-The client technology is to be decided.  Most likely javascript / HTML5.
-
-The plan is to have it available on as many platforms as possible.
+The client will be created using Godot this to have it available on as many
+platforms as possible.
 
 vi: spell spl=en
