@@ -1,4 +1,4 @@
-#Goals
+# Goals
 
 1. Allow as many people as possible to play;
 2. Make it easy to host a game, server should run out of the box with as
@@ -6,5 +6,7 @@
 3. Make it easy to host a game on different platforms;
 4. Player should be able to prepare orders off-line;
 5. Make it such no reboot is necessary for the coming 10 years.
+6. Have a good AI that can take over a position of a player
+   that dropped out of the game.
 
 vi: spell spl=en ft=markdown

@@ -3,7 +3,7 @@
 all : .test
 
 .test :
-	python runalltests.py
+	python -m pytest .
 
 .report :
 	./bin/galaxy.py create test

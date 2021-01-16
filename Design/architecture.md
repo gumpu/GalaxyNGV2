@@ -1,4 +1,4 @@
-#Architecture
+# Architecture
 
 The game has a client server architecture.
 
@@ -20,35 +20,37 @@ When finished the orders are posted to the webserver and stored on disk.
 
 A few times a week the game engines reads all orders and runs a turn.
 
-##Client
+## Client
 
 TODO
 
-##Technology
-
-Client and server exchange data in JSON format.
+## Technology
 
 The game server stores game data in python pickle format.
 
 The web server and game engine are written in Python.
 
-The client is written in Javascript.
+The client is written in Godot.  This makes it easy to port it to different
+platforms as Godot supports exports to several platforms.
 
-##Security
+Client and server exchange data in JSON format.  Both Godot and Python have
+support for JSON.
+
+## Security
 
 Security on the game master's side is more important than
 preventing in game cheating.
 
 The attack surface of the web server should be as small as possible.
 
-##Limits
+## Limits
 
 Why have limits?  They make it easier to design and implement an application.
 They also encourage more creativity from the players.
 
 Current limits:
 
-1. The size of a planet is in the range [10,2000].
+1. The size of a planet is in the range [10, 2000].
 2. The size of the galaxy is in the range [50, 5000].
 3. Names of game elements are limited to 32 characters.
 
